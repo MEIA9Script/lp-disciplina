@@ -1,0 +1,132 @@
+.cta-final__bloco {
+  position: relative;
+  padding: clamp(2rem, 1.4rem + 3vw, 4rem) clamp(1.4rem, 1rem + 2.4vw, 3.5rem);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  text-align: center;
+  background:
+    radial-gradient(80% 120% at 50% 0%, rgba(139, 92, 246, 0.2), transparent 62%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(32, 242, 123, 0.12));
+  border: 1px solid var(--roxo-linha);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: var(--sombra-alta), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.cta-final__aura {
+  position: absolute;
+  bottom: -55%;
+  left: 50%;
+  width: 38rem;
+  height: 38rem;
+  max-width: 130%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(32, 242, 123, 0.28), transparent 62%);
+  filter: blur(12px);
+  animation: respirar 9s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Retomada do elemento assinatura: 11 dias feitos, hoje em aberto */
+.cta-final__grade {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: var(--sp-4);
+}
+
+.cta-final__dia {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cta-final__dia.is-feito {
+  background: var(--roxo);
+  border-color: transparent;
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.55);
+}
+
+.cta-final__dia.is-hoje {
+  background: transparent;
+  border: 1px dashed var(--roxo);
+  animation: respirar 2s ease-in-out infinite;
+}
+
+.cta-final__eyebrow {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin-bottom: var(--sp-2);
+  padding: 0.38rem 0.9rem;
+  border-radius: var(--r-pill);
+  background: rgba(4, 6, 10, 0.45);
+  border: 1px solid var(--verde-linha);
+  color: var(--verde-claro);
+  font-family: var(--fonte-display);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.cta-final__titulo {
+  position: relative;
+  z-index: 1;
+  max-width: 22ch;
+  margin-inline: auto;
+  font-size: clamp(1.85rem, 1.35rem + 2.4vw, 3.2rem);
+  text-wrap: balance;
+}
+
+.cta-final__texto {
+  position: relative;
+  z-index: 1;
+  max-width: 38rem;
+  margin: var(--sp-3) auto 0;
+  font-size: var(--t-lead);
+  line-height: 1.6;
+}
+
+.cta-final__acoes {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: var(--sp-4);
+}
+
+.cta-final__selos {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.3rem;
+  margin-top: var(--sp-4);
+  font-size: 0.78rem;
+  color: var(--texto-fraco);
+}
+
+.cta-final__selos li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.cta-final__selos svg {
+  color: var(--roxo);
+}
+
+@media (min-width: 640px) {
+  .cta-final__acoes {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+}

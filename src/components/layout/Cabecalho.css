@@ -1,0 +1,148 @@
+.cabecalho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding-block: 0.85rem;
+  transition:
+    background var(--medio) var(--ease),
+    border-color var(--medio) var(--ease),
+    padding var(--medio) var(--ease),
+    box-shadow var(--medio) var(--ease);
+  border-bottom: 1px solid transparent;
+}
+
+.cabecalho.is-encolhido {
+  padding-block: 0.55rem;
+  background: rgba(4, 6, 10, 0.72);
+  border-bottom-color: var(--borda);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+.cabecalho__interno {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+}
+
+/* --- Marca: a propria grade de constancia em miniatura --- */
+.cabecalho__marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.cabecalho__sigla {
+  display: grid;
+  grid-template-columns: repeat(2, 8px);
+  gap: 3px;
+  flex: none;
+  padding: 5px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--borda);
+}
+
+.cabecalho__sigla i {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--roxo);
+  box-shadow: 0 0 8px rgba(139, 92, 246, 0.6);
+}
+
+.cabecalho__sigla i:nth-child(2) {
+  opacity: 0.45;
+}
+
+.cabecalho__sigla i:nth-child(3) {
+  background: var(--verde);
+  box-shadow: 0 0 8px rgba(32, 242, 123, 0.6);
+}
+
+.cabecalho__sigla i:nth-child(4) {
+  background: transparent;
+  border: 1px dashed rgba(255, 255, 255, 0.28);
+  box-shadow: none;
+}
+
+.cabecalho__nome {
+  font-family: var(--fonte-display);
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.cabecalho__nome em {
+  display: block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.66rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--roxo);
+}
+
+/* --- Navegacao (desktop) --- */
+.cabecalho__nav {
+  display: none;
+  gap: 1.6rem;
+}
+
+.cabecalho__link {
+  position: relative;
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--texto-suave);
+  transition: color var(--rapido) var(--ease);
+}
+
+.cabecalho__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 1px;
+  background: var(--roxo);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--medio) var(--ease);
+}
+
+.cabecalho__link:hover {
+  color: var(--texto);
+}
+
+.cabecalho__link:hover::after {
+  transform: scaleX(1);
+}
+
+.cabecalho__acao {
+  display: none;
+}
+
+@media (min-width: 720px) {
+  .cabecalho__acao {
+    display: block;
+  }
+}
+
+@media (min-width: 980px) {
+  .cabecalho__nav {
+    display: flex;
+  }
+}
+
+/* Em telas muito estreitas o CTA do topo sai de cena:
+   o botao do hero fica visivel logo abaixo. */
+@media (max-width: 719px) {
+  .cabecalho__nome {
+    font-size: 0.86rem;
+  }
+}

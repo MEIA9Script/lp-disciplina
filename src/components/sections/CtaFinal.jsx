@@ -1,0 +1,46 @@
+import './CtaFinal.css'
+import Botao from '../ui/Botao'
+import Icone from '../ui/Icone'
+import Reveal from '../ui/Reveal'
+import { CTA_FINAL, HERO } from '../../data/content'
+
+export default function CtaFinal() {
+  return (
+    <section className="secao cta-final" id="comprar">
+      <div className="container">
+        <Reveal className="cta-final__bloco">
+          <div className="cta-final__aura" aria-hidden="true" />
+
+          {/* A grade de constancia volta aqui, agora com o proximo dia em aberto */}
+          <div className="cta-final__grade" aria-hidden="true">
+            {Array.from({ length: 14 }, (_, i) => (
+              <span key={i} className={`cta-final__dia ${i < 11 ? 'is-feito' : ''} ${i === 11 ? 'is-hoje' : ''}`} />
+            ))}
+          </div>
+
+          <p className="cta-final__eyebrow">{CTA_FINAL.eyebrow}</p>
+          <h2 className="cta-final__titulo">{CTA_FINAL.titulo}</h2>
+          <p className="cta-final__texto">{CTA_FINAL.texto}</p>
+
+          <div className="cta-final__acoes">
+            <Botao variante="compra" tamanho="lg" origem="cta-final" bloco>
+              COMPRAR AGORA
+            </Botao>
+            <Botao variante="zap" destino="whatsapp" origem="cta-final" bloco>
+              QUERO FALAR NO WHATSAPP
+            </Botao>
+          </div>
+
+          <ul className="cta-final__selos">
+            {HERO.selos.map((selo) => (
+              <li key={selo}>
+                <Icone nome="check" tamanho={13} />
+                {selo}
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+      </div>
+    </section>
+  )
+}

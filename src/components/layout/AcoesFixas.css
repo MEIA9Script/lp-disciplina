@@ -1,0 +1,119 @@
+/* --- Barra inferior (celular e tablet) --- */
+.barra-fixa {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 45;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem var(--gutter) calc(0.7rem + env(safe-area-inset-bottom));
+  background: rgba(4, 6, 10, 0.82);
+  border-top: 1px solid var(--borda);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  transform: translateY(120%);
+  transition: transform var(--medio) var(--ease);
+}
+
+.barra-fixa.is-visivel {
+  transform: none;
+}
+
+.barra-fixa__principal {
+  flex: 1;
+  padding-block: 0.9rem;
+  font-size: 0.88rem;
+}
+
+.barra-fixa__whats {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 50px;
+  height: 50px;
+  border-radius: var(--r-md);
+  color: #032213;
+  background: linear-gradient(140deg, var(--verde-claro), var(--verde));
+  box-shadow: var(--glow-verde);
+  transition: transform var(--rapido) var(--ease);
+}
+
+.barra-fixa__whats:hover {
+  transform: translateY(-2px);
+}
+
+/* --- Botao flutuante (desktop) --- */
+.whats-flutuante {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .barra-fixa {
+    display: none;
+  }
+
+  .whats-flutuante {
+    position: fixed;
+    right: 1.6rem;
+    bottom: 1.6rem;
+    z-index: 45;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem 0.85rem;
+    border-radius: var(--r-pill);
+    color: #032213;
+    background: linear-gradient(140deg, rgba(141, 255, 190, 0.96), rgba(23, 200, 106, 0.96));
+    border: 1px solid var(--verde-linha);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: var(--glow-verde);
+    opacity: 0;
+    transform: translateY(16px);
+    pointer-events: none;
+    transition:
+      opacity var(--medio) var(--ease),
+      transform var(--medio) var(--ease),
+      box-shadow var(--medio) var(--ease);
+  }
+
+  .whats-flutuante.is-visivel {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .whats-flutuante:hover {
+    box-shadow: var(--glow-verde-forte);
+    transform: translateY(-3px);
+  }
+
+  .whats-flutuante__icone {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(4, 6, 10, 0.18);
+  }
+
+  .whats-flutuante__texto {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding-right: 0.35rem;
+    font-family: var(--fonte-display);
+    font-size: 0.83rem;
+    font-weight: 600;
+  }
+
+  .whats-flutuante__texto svg {
+    transition: transform var(--medio) var(--ease);
+  }
+
+  .whats-flutuante:hover .whats-flutuante__texto svg {
+    transform: translateX(3px);
+  }
+}

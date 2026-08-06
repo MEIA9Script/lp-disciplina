@@ -1,0 +1,82 @@
+/* =========================================================
+   TOKENS
+   Fonte unica de verdade para cor, tipo, espaco e sombra.
+   Distribuicao de cor da marca: 50% roxo neon, 30% preto, 20% verde.
+   Roxo = marca e acao de compra. Verde = WhatsApp, cupom e confirmacao.
+   ========================================================= */
+
+:root {
+  /* --- Preto em camadas --- */
+  --preto: #04060a;
+  --preto-2: #070b11;
+  --preto-3: #0b1018;
+  --vidro: rgba(255, 255, 255, 0.045);
+  --vidro-forte: rgba(255, 255, 255, 0.075);
+  --borda: rgba(255, 255, 255, 0.09);
+  --borda-forte: rgba(255, 255, 255, 0.16);
+
+  /* --- Verde (WhatsApp, cupom, confirmacao) --- */
+  --verde: #20f27b;
+  --verde-claro: #8dffbe;
+  --verde-fundo: rgba(32, 242, 123, 0.12);
+  --verde-linha: rgba(32, 242, 123, 0.32);
+
+  /* --- Roxo neon (cor dominante da marca) --- */
+  --roxo: #8b5cf6;
+  --roxo-claro: #c9a9ff;
+  --roxo-fundo: rgba(139, 92, 246, 0.14);
+  --roxo-linha: rgba(139, 92, 246, 0.38);
+
+  /* --- Texto --- */
+  --texto: #eef5f0;
+  --texto-suave: #a3b0ad;
+  --texto-fraco: #6d7a78;
+
+  /* --- Tipografia --- */
+  --fonte-display: 'Sora', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --fonte-texto: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --fonte-mono: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  /* Escala fluida: mobile first, cresce ate o desktop sem media query */
+  --t-eyebrow: 0.72rem;
+  --t-mini: clamp(0.8rem, 0.78rem + 0.1vw, 0.875rem);
+  --t-corpo: clamp(0.98rem, 0.94rem + 0.22vw, 1.075rem);
+  --t-lead: clamp(1.05rem, 0.98rem + 0.42vw, 1.25rem);
+  --t-h3: clamp(1.12rem, 1.04rem + 0.4vw, 1.32rem);
+  --t-h2: clamp(1.85rem, 1.42rem + 2.1vw, 3.1rem);
+  --t-h1: clamp(2.05rem, 1.4rem + 2.9vw, 3.55rem);
+  --t-numero: clamp(1.9rem, 1.4rem + 2.2vw, 2.9rem);
+
+  /* --- Espaco --- */
+  --sp-1: 0.375rem;
+  --sp-2: 0.75rem;
+  --sp-3: 1.125rem;
+  --sp-4: 1.75rem;
+  --sp-5: 2.5rem;
+  --sp-6: 3.5rem;
+  --secao-y: clamp(4.25rem, 3rem + 6vw, 7.5rem);
+  --container: 1160px;
+  --container-estreito: 800px;
+  --gutter: clamp(1.15rem, 0.8rem + 1.8vw, 2.5rem);
+
+  /* --- Raio --- */
+  --r-sm: 12px;
+  --r-md: 18px;
+  --r-lg: 26px;
+  --r-xl: 34px;
+  --r-pill: 999px;
+
+  /* --- Sombra e glow --- */
+  --sombra-card: 0 18px 44px rgba(0, 0, 0, 0.55);
+  --sombra-alta: 0 32px 80px rgba(0, 0, 0, 0.65);
+  --glow-verde: 0 0 0 1px rgba(32, 242, 123, 0.35), 0 12px 38px rgba(32, 242, 123, 0.28);
+  --glow-verde-forte: 0 0 0 1px rgba(32, 242, 123, 0.5), 0 18px 55px rgba(32, 242, 123, 0.42);
+  --glow-roxo: 0 0 0 1px rgba(139, 92, 246, 0.4), 0 12px 38px rgba(139, 92, 246, 0.32);
+  --glow-roxo-forte: 0 0 0 1px rgba(139, 92, 246, 0.55), 0 18px 55px rgba(139, 92, 246, 0.45);
+
+  /* --- Movimento --- */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --rapido: 180ms;
+  --medio: 320ms;
+  --lento: 620ms;
+}

@@ -1,0 +1,129 @@
+.rodape {
+  position: relative;
+  margin-top: var(--sp-6);
+  padding-block: var(--sp-5) calc(var(--sp-5) + 3.5rem);
+  border-top: 1px solid var(--borda);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+}
+
+.rodape__interno {
+  display: grid;
+  gap: var(--sp-4);
+}
+
+.rodape__marca {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.rodape__sigla {
+  display: grid;
+  grid-template-columns: repeat(2, 8px);
+  gap: 3px;
+  flex: none;
+  padding: 5px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--borda);
+}
+
+.rodape__sigla i {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--roxo);
+}
+
+.rodape__sigla i:nth-child(2) {
+  opacity: 0.45;
+}
+
+.rodape__sigla i:nth-child(3) {
+  background: var(--verde);
+}
+
+.rodape__sigla i:nth-child(4) {
+  background: transparent;
+  border: 1px dashed rgba(255, 255, 255, 0.28);
+}
+
+.rodape__nome {
+  font-family: var(--fonte-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--texto);
+}
+
+.rodape__frase {
+  max-width: 30rem;
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--texto-fraco);
+}
+
+.rodape__links,
+.rodape__contato {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.4rem;
+  font-size: 0.86rem;
+}
+
+.rodape__links a,
+.rodape__contato a {
+  color: var(--texto-suave);
+  transition: color var(--rapido) var(--ease);
+}
+
+.rodape__links a:hover,
+.rodape__contato a:hover {
+  color: var(--roxo);
+}
+
+.rodape__contato {
+  font-size: 0.82rem;
+  color: var(--texto-fraco);
+}
+
+.rodape__aviso {
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--borda);
+  font-size: 0.76rem;
+  line-height: 1.6;
+  color: var(--texto-fraco);
+}
+
+.rodape__copy {
+  font-size: 0.76rem;
+  color: var(--texto-fraco);
+}
+
+@media (min-width: 860px) {
+  .rodape__interno {
+    grid-template-columns: 1.4fr 1fr;
+    align-items: start;
+    column-gap: var(--sp-5);
+  }
+
+  .rodape__marca {
+    grid-row: span 2;
+  }
+
+  .rodape__links {
+    justify-content: flex-end;
+  }
+
+  .rodape__contato {
+    justify-content: flex-end;
+  }
+
+  .rodape__aviso,
+  .rodape__copy {
+    grid-column: 1 / -1;
+  }
+
+  .rodape {
+    padding-bottom: var(--sp-5);
+  }
+}

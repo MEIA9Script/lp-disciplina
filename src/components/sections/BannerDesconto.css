@@ -1,0 +1,92 @@
+.banner-desconto {
+  padding-block: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+}
+
+.banner {
+  position: relative;
+  display: grid;
+  gap: var(--sp-4);
+  padding: clamp(1.6rem, 1.1rem + 2.4vw, 2.75rem);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  background:
+    linear-gradient(150deg, rgba(32, 242, 123, 0.22), rgba(255, 255, 255, 0.03) 52%, rgba(139, 92, 246, 0.14));
+  border: 1px solid var(--verde-linha);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: var(--sombra-alta), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+/* Brilho que atravessa o banner devagar */
+.banner__aura {
+  position: absolute;
+  top: -60%;
+  left: -30%;
+  width: 45%;
+  height: 240%;
+  background: linear-gradient(90deg, transparent, rgba(201, 169, 255, 0.22), transparent);
+  transform: skewX(-16deg);
+  animation: varredura 5.5s var(--ease) infinite;
+  pointer-events: none;
+}
+
+.banner__conteudo {
+  position: relative;
+  z-index: 1;
+}
+
+.banner__etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: var(--sp-2);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--r-pill);
+  background: rgba(4, 6, 10, 0.45);
+  border: 1px solid var(--verde-linha);
+  color: var(--verde-claro);
+  font-family: var(--fonte-display);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.banner__titulo {
+  font-size: clamp(1.5rem, 1.2rem + 1.6vw, 2.15rem);
+  text-wrap: balance;
+}
+
+.banner__texto {
+  margin-top: var(--sp-2);
+  max-width: 38rem;
+  font-size: var(--t-corpo);
+  color: #cfc4e8;
+}
+
+.banner__acao {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.6rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.banner__apoio {
+  font-size: 0.76rem;
+  color: var(--texto-fraco);
+}
+
+@media (min-width: 900px) {
+  .banner {
+    grid-template-columns: 1.35fr auto;
+    align-items: center;
+    gap: var(--sp-5);
+  }
+
+  .banner__acao {
+    justify-items: end;
+    text-align: right;
+  }
+}

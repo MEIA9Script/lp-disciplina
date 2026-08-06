@@ -1,0 +1,85 @@
+.beneficios__grade {
+  display: grid;
+  gap: clamp(0.9rem, 0.6rem + 1.2vw, 1.4rem);
+}
+
+.beneficio {
+  position: relative;
+  padding: clamp(1.35rem, 1.1rem + 1vw, 1.85rem);
+  overflow: hidden;
+  transition:
+    transform var(--medio) var(--ease),
+    border-color var(--medio) var(--ease),
+    box-shadow var(--medio) var(--ease);
+}
+
+/* Linha de luz no topo do card, revelada no hover */
+.beneficio::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 12%;
+  right: 12%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--roxo), transparent);
+  opacity: 0;
+  transition: opacity var(--medio) var(--ease);
+}
+
+.beneficio:hover {
+  transform: translateY(-5px);
+  border-color: var(--roxo-linha);
+  box-shadow: var(--sombra-alta), 0 0 34px rgba(139, 92, 246, 0.14);
+}
+
+.beneficio:hover::before {
+  opacity: 1;
+}
+
+.beneficio__icone {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: var(--sp-3);
+  border-radius: 14px;
+  color: var(--roxo);
+  background: var(--roxo-fundo);
+  border: 1px solid var(--roxo-linha);
+  box-shadow: inset 0 0 22px rgba(139, 92, 246, 0.16);
+  transition: transform var(--medio) var(--ease);
+}
+
+.beneficio:hover .beneficio__icone {
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* O quarto e o quinto card recebem o roxo para equilibrar a paleta */
+.beneficio:nth-child(4) .beneficio__icone,
+.beneficio:nth-child(5) .beneficio__icone {
+  color: var(--verde-claro);
+  background: var(--verde-fundo);
+  border-color: var(--verde-linha);
+  box-shadow: inset 0 0 22px rgba(32, 242, 123, 0.18);
+}
+
+.beneficio__titulo {
+  margin-bottom: 0.5rem;
+}
+
+.beneficio__texto {
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 640px) {
+  .beneficios__grade {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .beneficios__grade {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

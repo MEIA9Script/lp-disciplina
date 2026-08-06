@@ -1,0 +1,114 @@
+.garantia__bloco {
+  position: relative;
+  padding: clamp(1.6rem, 1.2rem + 2.2vw, 3rem);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  background: linear-gradient(155deg, rgba(139, 92, 246, 0.12), rgba(255, 255, 255, 0.03) 55%, rgba(32, 242, 123, 0.12));
+  border: 1px solid var(--roxo-linha);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: var(--sombra-alta), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.garantia__aura {
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: 32rem;
+  height: 32rem;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.22), transparent 65%);
+  filter: blur(10px);
+  animation: respirar 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.garantia__cabecalho {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: var(--sp-3);
+}
+
+.garantia__selo {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 58px;
+  height: 58px;
+  border-radius: 20px;
+  color: var(--roxo);
+  background: rgba(4, 6, 10, 0.5);
+  border: 1px solid var(--roxo-linha);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.24);
+}
+
+.garantia__eyebrow {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--roxo-claro);
+}
+
+.garantia__titulo {
+  font-size: clamp(1.4rem, 1.15rem + 1.4vw, 2.1rem);
+  margin-top: 2px;
+}
+
+.garantia__texto {
+  position: relative;
+  z-index: 1;
+  max-width: 44rem;
+  font-size: var(--t-corpo);
+  line-height: 1.65;
+}
+
+.garantia__itens {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.8rem;
+  margin-top: var(--sp-4);
+}
+
+.garantia__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding: 0.95rem 1.05rem;
+  border-radius: var(--r-md);
+  background: rgba(4, 6, 10, 0.42);
+  border: 1px solid var(--borda);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--texto-suave);
+}
+
+.garantia__item strong {
+  display: block;
+  margin-bottom: 2px;
+  font-family: var(--fonte-display);
+  font-size: 0.9rem;
+  color: var(--texto);
+}
+
+.garantia__check {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 22px;
+  height: 22px;
+  margin-top: 0.15em;
+  border-radius: 50%;
+  color: #f7f3ff;
+  background: var(--roxo);
+  box-shadow: 0 0 14px rgba(139, 92, 246, 0.45);
+}
+
+@media (min-width: 760px) {
+  .garantia__itens {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

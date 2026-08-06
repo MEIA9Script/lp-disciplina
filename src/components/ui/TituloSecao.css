@@ -1,0 +1,51 @@
+.titulo-secao {
+  max-width: 44rem;
+  margin-bottom: var(--sp-5);
+}
+
+.titulo-secao--centro {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.titulo-secao__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: var(--sp-2);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--r-pill);
+  font-family: var(--fonte-display);
+  font-size: var(--t-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.titulo-secao__eyebrow--apoio {
+  color: var(--roxo-claro);
+  background: var(--roxo-fundo);
+  border: 1px solid var(--roxo-linha);
+}
+
+.titulo-secao__eyebrow--marca {
+  color: var(--verde-claro);
+  background: var(--verde-fundo);
+  border: 1px solid var(--verde-linha);
+}
+
+.titulo-secao__titulo {
+  text-wrap: balance;
+}
+
+.titulo-secao__apoio {
+  margin-top: var(--sp-3);
+  font-size: var(--t-lead);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+.titulo-secao--centro .titulo-secao__apoio {
+  margin-inline: auto;
+  max-width: 40rem;
+}

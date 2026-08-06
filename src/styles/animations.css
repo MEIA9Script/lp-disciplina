@@ -1,0 +1,102 @@
+/* =========================================================
+   MOVIMENTO
+   Todo o movimento nasce aqui. Nenhuma lib externa.
+   ========================================================= */
+
+/* --- Scroll reveal (aplicado pelo hook useReveal) --- */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 26px, 0);
+  transition:
+    opacity var(--lento) var(--ease),
+    transform var(--lento) var(--ease);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visivel {
+  opacity: 1;
+  transform: none;
+}
+
+/* --- Entrada do hero em sequencia --- */
+@keyframes surgir {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.entrada {
+  animation: surgir 900ms var(--ease) both;
+}
+
+/* --- Pulso do botao de desconto (verde do WhatsApp) --- */
+@keyframes pulso-acao {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(32, 242, 123, 0.55), var(--sombra-card);
+  }
+  50% {
+    box-shadow: 0 0 0 16px rgba(32, 242, 123, 0), var(--sombra-card);
+  }
+}
+
+/* --- Varredura de brilho que cruza o botao --- */
+@keyframes varredura {
+  0% {
+    transform: translateX(-140%) skewX(-18deg);
+  }
+  55%,
+  100% {
+    transform: translateX(240%) skewX(-18deg);
+  }
+}
+
+/* --- Respiro dos halos de fundo --- */
+@keyframes respirar {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.08);
+  }
+}
+
+/* --- Acender de um dia da grade de constancia --- */
+@keyframes acender {
+  0% {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: none;
+  }
+  100% {
+    background: var(--roxo);
+    box-shadow: 0 0 14px rgba(139, 92, 246, 0.75);
+  }
+}
+
+/* --- Preferencia de movimento reduzido --- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
