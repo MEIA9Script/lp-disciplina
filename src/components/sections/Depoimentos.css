@@ -127,12 +127,6 @@
   }
 }
 
-.depoimentos__aviso {
-  margin-top: var(--sp-3);
-  font-size: 0.78rem;
-  color: var(--texto-fraco);
-  text-align: center;
-}
 
 @media (min-width: 700px) {
   .depoimentos__grade {

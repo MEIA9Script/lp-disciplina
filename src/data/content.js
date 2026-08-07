@@ -271,9 +271,6 @@ export const DEPOIMENTOS = [
   },
 ]
 
-export const AVISO_DEPOIMENTOS =
-  'Relatos ilustrativos de uso do método. Experiências individuais variam e não representam promessa de resultado.'
-
 /* ----------------------------- GARANTIA ----------------------------- */
 export const GARANTIA = {
   titulo: 'Compra segura, do começo ao fim',

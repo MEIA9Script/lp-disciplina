@@ -2,7 +2,7 @@ import './Depoimentos.css'
 import Estrelas from '../ui/Estrelas'
 import Reveal from '../ui/Reveal'
 import TituloSecao from '../ui/TituloSecao'
-import { AVISO_DEPOIMENTOS, DEPOIMENTOS } from '../../data/content'
+import { DEPOIMENTOS } from '../../data/content'
 
 /*
   Avatar: por enquanto usa as iniciais da pessoa, sem foto de banco de imagem
@@ -45,10 +45,6 @@ export default function Depoimentos() {
         </div>
 
         <p className="depoimentos__dica">Deslize para o lado para ver os outros</p>
-
-        <Reveal as="p" className="depoimentos__aviso">
-          {AVISO_DEPOIMENTOS}
-        </Reveal>
       </div>
     </section>
   )
