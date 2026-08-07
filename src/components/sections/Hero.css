@@ -98,11 +98,34 @@
   border: 1px solid var(--roxo-linha);
 }
 
+/* --- Preco --- */
+.hero__preco {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-top: var(--sp-4);
+}
+
+.hero__preco-valor {
+  font-family: var(--fonte-display);
+  font-size: clamp(1.9rem, 1.5rem + 1.6vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--roxo);
+  text-shadow: 0 0 32px rgba(139, 92, 246, 0.45);
+}
+
+.hero__preco-apoio {
+  font-size: 0.84rem;
+  color: var(--texto-fraco);
+}
+
 /* --- Acoes --- */
 .hero__acoes {
   display: grid;
   gap: 0.75rem;
-  margin-top: var(--sp-4);
+  margin-top: var(--sp-3);
 }
 
 .hero__nota {

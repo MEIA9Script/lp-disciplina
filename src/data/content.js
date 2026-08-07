@@ -7,6 +7,15 @@
 export const LINKS = {
   checkout: 'https://pay.lowify.com.br/checkout?product_id=bGpm3F',
   whatsapp: 'https://wa.me/5565999684531',
+  // Ebook inicial: enquanto o checkout proprio nao existir, o botao leva ao WhatsApp.
+  // Assim que tiver o link da Lowify, e so trocar a linha abaixo.
+  checkoutInicial: 'https://wa.me/5565999684531',
+}
+
+/* Valores exibidos na pagina. Trocar aqui atualiza hero, CTA final e FAQ. */
+export const PRECOS = {
+  completo: 'R$ 34,90',
+  inicial: 'R$ 10,00',
 }
 
 export const MARCA = {
@@ -31,6 +40,10 @@ export const HERO = {
     'Acesso imediato, direto no seu e-mail',
   ],
   selos: ['Acesso imediato', 'Compra 100% online', 'Assista quando quiser'],
+  preco: {
+    valor: 'R$ 34,90',
+    apoio: 'pagamento único, acesso imediato',
+  },
 }
 
 /* ------------------------- BANNER DE CUPOM ------------------------- */
@@ -286,9 +299,9 @@ export const FAQ = [
       'Sim, dá para assistir e aplicar pelo celular. Algumas tarefas ficam mais confortáveis no computador, mas nenhuma delas depende disso.',
   },
   {
-    pergunta: 'Quais formas de pagamento são aceitas?',
+    pergunta: 'Quanto custa e quais formas de pagamento são aceitas?',
     resposta:
-      'As opções disponíveis aparecem no checkout da plataforma, incluindo cartão e Pix. O valor e as condições de parcelamento também são exibidos lá.',
+      'O método completo sai por R$ 34,90, em pagamento único. Existe também o material inicial, mais curto, por R$ 10,00. As formas disponíveis, incluindo cartão e Pix, aparecem no checkout da plataforma.',
   },
   {
     pergunta: 'Como funciona o cupom de desconto?',
@@ -305,6 +318,9 @@ export const FAQ = [
 /* ------------------------------ CTA FINAL ------------------------------ */
 export const CTA_FINAL = {
   eyebrow: 'Última chamada',
+  preco: 'R$ 34,90',
+  precoApoio: 'pagamento único, sem mensalidade',
+  inicial: 'Quer começar mais leve? O material inicial sai por R$ 10,00.',
   titulo: 'A diferença entre quem consegue e quem desiste é o dia de amanhã.',
   texto:
     'Você pode começar hoje com um caminho definido ou continuar tentando manter tudo na cabeça. As vagas com cupom são limitadas ao período em que a condição estiver de pé.',

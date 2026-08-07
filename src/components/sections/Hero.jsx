@@ -48,6 +48,11 @@ export default function Hero() {
             ))}
           </ul>
 
+          <div className="hero__preco entrada" style={{ animationDelay: '320ms' }}>
+            <span className="hero__preco-valor">{HERO.preco.valor}</span>
+            <span className="hero__preco-apoio">{HERO.preco.apoio}</span>
+          </div>
+
           <div className="hero__acoes entrada" style={{ animationDelay: '340ms' }}>
             <Botao variante="compra" tamanho="lg" origem="hero" bloco>
               QUERO ACESSAR AGORA

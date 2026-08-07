@@ -22,6 +22,11 @@ export default function CtaFinal() {
           <h2 className="cta-final__titulo">{CTA_FINAL.titulo}</h2>
           <p className="cta-final__texto">{CTA_FINAL.texto}</p>
 
+          <div className="cta-final__preco">
+            <span className="cta-final__valor">{CTA_FINAL.preco}</span>
+            <span className="cta-final__apoio">{CTA_FINAL.precoApoio}</span>
+          </div>
+
           <div className="cta-final__acoes">
             <Botao variante="compra" tamanho="lg" origem="cta-final" bloco>
               COMPRAR AGORA
@@ -30,6 +35,8 @@ export default function CtaFinal() {
               QUERO FALAR NO WHATSAPP
             </Botao>
           </div>
+
+          <p className="cta-final__inicial">{CTA_FINAL.inicial}</p>
 
           <ul className="cta-final__selos">
             {HERO.selos.map((selo) => (
