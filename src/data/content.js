@@ -5,8 +5,8 @@
    ========================================================= */
 
 export const LINKS = {
-  checkout: 'https://pay.lowify.com.br/checkout.php?product_id=bGpm3F',
-  checkoutInicial: 'https://pay.lowify.com.br/go.php?offer=glz6h75',
+  checkout: 'https://pay.lowify.com.br/checkout?product_id=bGpm3F',
+  checkoutInicial: 'https://pay.lowify.com.br/checkout?product_id=1FmEMW',
 }
 
 /* Valores exibidos na pagina. Trocar aqui atualiza hero, CTA final e FAQ. */
