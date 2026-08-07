@@ -18,7 +18,7 @@ export const PRECOS = {
 export const MARCA = {
   nome: 'Disciplina que Dá Dinheiro',
   nomeCurto: 'Disciplina',
-  email: 'contato@seudominio.com.br',
+  email: 'iuri.dahora.5@gmail.com',
   ano: new Date().getFullYear(),
 }
 

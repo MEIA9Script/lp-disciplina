@@ -2,9 +2,8 @@ import './Rodape.css'
 import { MARCA } from '../../data/content'
 
 /*
-  Os links de Política de Privacidade e Termos de Uso apontam para páginas
-  próprias. Publique os dois documentos e troque os href abaixo pelos
-  endereços finais (ex.: /politica-de-privacidade).
+  As duas páginas legais são arquivos estáticos em public/, servidos junto
+  com a build. Falta preencher nome, documento e foro dentro delas.
 */
 
 export default function Rodape() {
@@ -25,8 +24,8 @@ export default function Rodape() {
         </div>
 
         <nav className="rodape__links" aria-label="Links institucionais">
-          <a href="/politica-de-privacidade">Política de Privacidade</a>
-          <a href="/termos-de-uso">Termos de Uso</a>
+          <a href="/politica-de-privacidade.html">Política de Privacidade</a>
+          <a href="/termos-de-uso.html">Termos de Uso</a>
           <a href={`mailto:${MARCA.email}`}>Contato</a>
         </nav>
 
