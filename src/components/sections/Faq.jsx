@@ -17,7 +17,7 @@ export default function Faq() {
         <TituloSecao
           eyebrow="Dúvidas frequentes"
           titulo="Perguntas que costumam vir antes da compra"
-          apoio="Se a sua dúvida não estiver aqui, me chame no WhatsApp antes de decidir."
+          apoio="As dúvidas que mais aparecem antes da compra, respondidas sem rodeio."
         />
 
         <div className="faq__lista">
@@ -56,9 +56,9 @@ export default function Faq() {
         </div>
 
         <Reveal className="faq__ajuda">
-          <p className="faq__ajuda-texto">Ficou com alguma dúvida específica sobre o seu caso?</p>
-          <Botao variante="zap" destino="whatsapp" origem="faq">
-            FALAR NO WHATSAPP
+          <p className="faq__ajuda-texto">Pronto para começar?</p>
+          <Botao variante="compra" destino="planos" origem="faq">
+            VER VALORES
           </Botao>
         </Reveal>
       </div>

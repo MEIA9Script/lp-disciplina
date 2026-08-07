@@ -48,21 +48,11 @@ export default function Hero() {
             ))}
           </ul>
 
-          <div className="hero__preco entrada" style={{ animationDelay: '320ms' }}>
-            <span className="hero__preco-valor">{HERO.preco.valor}</span>
-            <span className="hero__preco-apoio">{HERO.preco.apoio}</span>
-          </div>
-
           <div className="hero__acoes entrada" style={{ animationDelay: '340ms' }}>
-            <Botao variante="compra" tamanho="lg" origem="hero" bloco>
-              QUERO ACESSAR AGORA
+            <Botao variante="compra" destino="planos" tamanho="lg" origem="hero" bloco>
+              VER VALORES
             </Botao>
-            <Botao variante="zap" destino="whatsapp" origem="hero" bloco>
-              QUERO MEU DESCONTO
-            </Botao>
-            <p className="hero__nota">
-              A compra direta libera o acesso na hora. Se preferir conversar antes, o WhatsApp fica aberto.
-            </p>
+            <p className="hero__nota">Dois materiais, a partir de R$ 10, com acesso imediato.</p>
           </div>
 
           <ul className="hero__selos entrada" style={{ animationDelay: '420ms' }}>

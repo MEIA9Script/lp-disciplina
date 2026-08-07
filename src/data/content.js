@@ -7,7 +7,6 @@
 export const LINKS = {
   checkout: 'https://pay.lowify.com.br/checkout.php?product_id=bGpm3F',
   checkoutInicial: 'https://pay.lowify.com.br/go.php?offer=glz6h75',
-  whatsapp: 'https://wa.me/5565999684531',
 }
 
 /* Valores exibidos na pagina. Trocar aqui atualiza hero, CTA final e FAQ. */
@@ -20,7 +19,6 @@ export const MARCA = {
   nome: 'Disciplina que Dá Dinheiro',
   nomeCurto: 'Disciplina',
   email: 'contato@seudominio.com.br',
-  whatsappVisivel: '(65) 99968-4531',
   ano: new Date().getFullYear(),
 }
 
@@ -38,18 +36,6 @@ export const HERO = {
     'Acesso imediato, direto no seu e-mail',
   ],
   selos: ['Acesso imediato', 'Compra 100% online', 'Assista quando quiser'],
-  preco: {
-    valor: 'R$ 34,90',
-    apoio: 'pagamento único, acesso imediato',
-  },
-}
-
-/* ------------------------- BANNER DE CUPOM ------------------------- */
-export const BANNER = {
-  titulo: 'Quer economizar na compra?',
-  texto:
-    'Fale comigo no WhatsApp e receba um cupom exclusivo de desconto por tempo limitado. Se preferir resolver agora, o checkout continua aberto acima.',
-  botao: 'PEGAR DESCONTO AGORA',
 }
 
 /* --------------------------- BENEFICIOS --------------------------- */
@@ -297,7 +283,7 @@ export const GARANTIA = {
     { titulo: 'Ambiente protegido', texto: 'Checkout com criptografia e processamento feito pela plataforma de pagamento.' },
     { titulo: 'Acesso confirmado por e-mail', texto: 'Você recebe os dados de acesso assim que o pagamento é aprovado.' },
     { titulo: 'Direitos do consumidor', texto: 'Sua compra é amparada pelo Código de Defesa do Consumidor, conforme os prazos e as condições exibidos no checkout.' },
-    { titulo: 'Canal direto comigo', texto: 'Qualquer dúvida antes ou depois da compra pode ser resolvida no WhatsApp.' },
+    { titulo: 'Suporte por e-mail', texto: 'Qualquer dúvida sobre acesso ou pagamento é respondida pelo e-mail de contato.' },
   ],
 }
 
@@ -344,14 +330,9 @@ export const FAQ = [
       'O método completo sai por R$ 34,90, em pagamento único. Existe também o material inicial, mais curto, por R$ 10,00. As formas disponíveis, incluindo cartão e Pix, aparecem no checkout da plataforma.',
   },
   {
-    pergunta: 'Como funciona o cupom de desconto?',
+    pergunta: 'Qual a diferença entre o inicial e o completo?',
     resposta:
-      'É opcional. Quem prefere conversar antes pode chamar no WhatsApp e verificar se há cupom disponível no momento. Quem já decidiu compra direto pelo checkout, sem precisar falar comigo.',
-  },
-  {
-    pergunta: 'E se eu tiver uma dúvida que não está aqui?',
-    resposta:
-      'Chame no WhatsApp e me pergunte antes de comprar. Prefiro responder e você decidir com clareza do que fechar uma venda com dúvida no meio.',
+      'O inicial trabalha a base: por que você trava, o que é disciplina na prática e o desafio de 7 dias. O completo tem tudo isso mais a parte que leva ao primeiro cliente, com os serviços e preços, os scripts de abordagem, a proposta e o plano de 30 dias.',
   },
 ]
 
@@ -364,5 +345,5 @@ export const CTA_FINAL = {
   inicialLink: 'Comece pelo material inicial, por R$ 10,00',
   titulo: 'A diferença entre quem consegue e quem desiste é o dia de amanhã.',
   texto:
-    'Você pode começar hoje com um caminho definido ou continuar tentando manter tudo na cabeça. As vagas com cupom são limitadas ao período em que a condição estiver de pé.',
+    'Você pode começar hoje com um caminho definido ou continuar tentando manter tudo na cabeça. O acesso é liberado assim que o pagamento é confirmado.',
 }

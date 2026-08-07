@@ -34,7 +34,7 @@
   animation: surgir 900ms var(--ease) both;
 }
 
-/* --- Pulso do botao de desconto (verde do WhatsApp) --- */
+/* --- Pulso de destaque, disponivel para qualquer botao --- */
 @keyframes pulso-acao {
   0%,
   100% {

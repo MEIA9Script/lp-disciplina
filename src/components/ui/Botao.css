@@ -72,17 +72,6 @@
   box-shadow: var(--glow-roxo-forte);
 }
 
-/* --- Variante do WhatsApp: verde, para o cupom --- */
-.botao--zap {
-  color: #032213;
-  background: linear-gradient(135deg, var(--verde-claro), var(--verde) 55%, #12c862);
-  box-shadow: var(--glow-verde);
-}
-
-.botao--zap:hover {
-  box-shadow: var(--glow-verde-forte);
-}
-
 /* --- Variante contorno --- */
 .botao--linha {
   color: var(--texto);

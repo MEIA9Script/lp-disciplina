@@ -28,8 +28,3 @@ export function rastrear(evento, dados = {}) {
 export function rastrearCheckout(origem) {
   rastrear('InitiateCheckout', { content_name: 'Disciplina que Dá Dinheiro', origem })
 }
-
-/** Clique em qualquer botao que leva ao WhatsApp. */
-export function rastrearWhatsapp(origem) {
-  rastrear('Contact', { content_name: 'Cupom no WhatsApp', origem })
-}

@@ -3,7 +3,6 @@ import Rodape from './components/layout/Rodape'
 import AcoesFixas from './components/layout/AcoesFixas'
 
 import Hero from './components/sections/Hero'
-import BannerDesconto from './components/sections/BannerDesconto'
 import Beneficios from './components/sections/Beneficios'
 import Conteudo from './components/sections/Conteudo'
 import Planos from './components/sections/Planos'
@@ -17,8 +16,8 @@ import Faq from './components/sections/Faq'
 import CtaFinal from './components/sections/CtaFinal'
 
 /**
- * Ordem da pagina: promessa, oferta de cupom, prova de metodo,
- * qualificacao do publico, execucao, prova social, seguranca e fechamento.
+ * Ordem da pagina: promessa, prova de metodo, valores, qualificacao
+ * do publico, execucao, prova social, seguranca e fechamento.
  */
 export default function App() {
   return (
@@ -31,7 +30,6 @@ export default function App() {
 
       <main id="conteudo-principal">
         <Hero />
-        <BannerDesconto />
         <Beneficios />
         <Conteudo />
         <Planos />

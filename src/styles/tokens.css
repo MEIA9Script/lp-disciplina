@@ -2,7 +2,7 @@
    TOKENS
    Fonte unica de verdade para cor, tipo, espaco e sombra.
    Distribuicao de cor da marca: 50% roxo neon, 30% preto, 20% verde.
-   Roxo = marca e acao de compra. Verde = WhatsApp, cupom e confirmacao.
+   Roxo = marca e acao de compra. Verde = confirmacao e destaque de apoio.
    ========================================================= */
 
 :root {
@@ -15,7 +15,7 @@
   --borda: rgba(255, 255, 255, 0.09);
   --borda-forte: rgba(255, 255, 255, 0.16);
 
-  /* --- Verde (WhatsApp, cupom, confirmacao) --- */
+  /* --- Verde (confirmacao e apoio) --- */
   --verde: #20f27b;
   --verde-claro: #8dffbe;
   --verde-fundo: rgba(32, 242, 123, 0.12);

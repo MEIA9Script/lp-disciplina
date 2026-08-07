@@ -1,5 +1,5 @@
 import './Rodape.css'
-import { LINKS, MARCA } from '../../data/content'
+import { MARCA } from '../../data/content'
 
 /*
   Os links de Política de Privacidade e Termos de Uso apontam para páginas
@@ -27,16 +27,11 @@ export default function Rodape() {
         <nav className="rodape__links" aria-label="Links institucionais">
           <a href="/politica-de-privacidade">Política de Privacidade</a>
           <a href="/termos-de-uso">Termos de Uso</a>
-          <a href={LINKS.whatsapp} target="_blank" rel="noopener noreferrer">
-            Contato
-          </a>
+          <a href={`mailto:${MARCA.email}`}>Contato</a>
         </nav>
 
         <div className="rodape__contato">
           <a href={`mailto:${MARCA.email}`}>{MARCA.email}</a>
-          <a href={LINKS.whatsapp} target="_blank" rel="noopener noreferrer">
-            WhatsApp {MARCA.whatsappVisivel}
-          </a>
         </div>
 
         <p className="rodape__aviso">

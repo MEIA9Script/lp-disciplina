@@ -32,9 +32,6 @@ export default function CtaFinal() {
             <Botao variante="compra" tamanho="lg" origem="cta-final" bloco>
               COMPRAR AGORA
             </Botao>
-            <Botao variante="zap" destino="whatsapp" origem="cta-final" bloco>
-              QUERO FALAR NO WHATSAPP
-            </Botao>
           </div>
 
           <p className="cta-final__inicial">

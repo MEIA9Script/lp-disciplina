@@ -45,8 +45,8 @@ export default function Cabecalho() {
         </nav>
 
         <div className="cabecalho__acao">
-          <Botao variante="compra" tamanho="sm" origem="cabecalho">
-            QUERO ACESSAR
+          <Botao variante="compra" destino="planos" tamanho="sm" origem="cabecalho">
+            VER VALORES
           </Botao>
         </div>
       </div>
