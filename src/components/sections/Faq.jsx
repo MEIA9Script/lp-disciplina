@@ -57,8 +57,8 @@ export default function Faq() {
 
         <Reveal className="faq__ajuda">
           <p className="faq__ajuda-texto">Pronto para começar?</p>
-          <Botao variante="compra" destino="planos" origem="faq">
-            VER VALORES
+          <Botao variante="compra" destino="planos" origem="faq" seta>
+            QUERO COMEÇAR AGORA
           </Botao>
         </Reveal>
       </div>

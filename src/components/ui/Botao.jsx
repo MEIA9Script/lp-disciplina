@@ -1,4 +1,5 @@
 import './Botao.css'
+import Icone from './Icone'
 import { rastrear, rastrearCheckout } from '../../lib/analytics'
 import { LINKS } from '../../data/content'
 
@@ -18,6 +19,7 @@ export default function Botao({
   tamanho = 'md',
   pulsando = false,
   bloco = false,
+  seta = false,
   className = '',
 }) {
   const destinos = {
@@ -54,6 +56,7 @@ export default function Botao({
     >
       <span className="botao__brilho" aria-hidden="true" />
       <span className="botao__texto">{children}</span>
+      {seta && <Icone nome="seta" tamanho={17} className="botao__seta" />}
     </a>
   )
 }

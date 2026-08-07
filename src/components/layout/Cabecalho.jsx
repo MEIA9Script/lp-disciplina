@@ -46,7 +46,7 @@ export default function Cabecalho() {
 
         <div className="cabecalho__acao">
           <Botao variante="compra" destino="planos" tamanho="sm" origem="cabecalho">
-            VER VALORES
+            COMEÇAR AGORA
           </Botao>
         </div>
       </div>

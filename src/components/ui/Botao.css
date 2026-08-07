@@ -25,12 +25,15 @@
   white-space: nowrap;
 }
 
-.botao__icone {
+.botao__seta {
   position: relative;
   z-index: 2;
-  width: 1.15em;
-  height: 1.15em;
   flex: none;
+  transition: transform var(--medio) var(--ease);
+}
+
+.botao:hover .botao__seta {
+  transform: translateX(4px);
 }
 
 /* Varredura de luz no hover */

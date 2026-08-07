@@ -19,8 +19,8 @@ export default function AcoesFixas() {
 
   return (
     <div className={`barra-fixa ${visivel ? 'is-visivel' : ''}`}>
-      <Botao variante="compra" destino="planos" origem="barra-fixa" className="barra-fixa__principal">
-        VER VALORES
+      <Botao variante="compra" destino="planos" origem="barra-fixa" className="barra-fixa__principal" seta>
+        QUERO COMEÇAR AGORA
       </Botao>
     </div>
   )

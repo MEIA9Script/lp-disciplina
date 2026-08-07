@@ -49,10 +49,10 @@ export default function Hero() {
           </ul>
 
           <div className="hero__acoes entrada" style={{ animationDelay: '340ms' }}>
-            <Botao variante="compra" destino="planos" tamanho="lg" origem="hero" bloco>
-              VER VALORES
+            <Botao variante="compra" destino="planos" tamanho="lg" origem="hero" bloco pulsando seta>
+              QUERO COMEÇAR AGORA
             </Botao>
-            <p className="hero__nota">Dois materiais, a partir de R$ 10, com acesso imediato.</p>
+            <p className="hero__nota">Acesso imediato, a partir de R$ 10. Você escolhe o material na próxima seção.</p>
           </div>
 
           <ul className="hero__selos entrada" style={{ animationDelay: '420ms' }}>
