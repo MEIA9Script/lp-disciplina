@@ -5,8 +5,7 @@
 
 .resultado {
   position: relative;
-  padding: clamp(1.3rem, 1.05rem + 1vw, 1.8rem);
-  padding-left: clamp(1.3rem, 1.05rem + 1vw, 1.8rem);
+  padding: clamp(1.1rem, 0.9rem + 0.9vw, 1.8rem);
   border-left: 2px solid var(--roxo-linha);
   transition:
     transform var(--medio) var(--ease),

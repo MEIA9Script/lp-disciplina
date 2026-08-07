@@ -101,12 +101,14 @@
 /* --- Preco --- */
 .hero__preco {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
-  gap: 0.6rem;
+  gap: 0.15rem 0.6rem;
   margin-top: var(--sp-4);
 }
 
 .hero__preco-valor {
+  white-space: nowrap;
   font-family: var(--fonte-display);
   font-size: clamp(1.9rem, 1.5rem + 1.6vw, 2.6rem);
   font-weight: 800;

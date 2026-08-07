@@ -5,7 +5,7 @@
 
 .beneficio {
   position: relative;
-  padding: clamp(1.35rem, 1.1rem + 1vw, 1.85rem);
+  padding: clamp(1.15rem, 0.95rem + 0.9vw, 1.85rem);
   overflow: hidden;
   transition:
     transform var(--medio) var(--ease),

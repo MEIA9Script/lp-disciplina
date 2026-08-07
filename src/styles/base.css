@@ -135,6 +135,11 @@ button {
   padding-block: var(--secao-y);
 }
 
+/* O link do menu nao pode parar embaixo do cabecalho fixo */
+section[id] {
+  scroll-margin-top: 4.5rem;
+}
+
 .destaque-verde {
   color: var(--roxo);
 }

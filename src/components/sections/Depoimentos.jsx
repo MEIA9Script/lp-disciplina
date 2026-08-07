@@ -44,6 +44,8 @@ export default function Depoimentos() {
           ))}
         </div>
 
+        <p className="depoimentos__dica">Deslize para o lado para ver os outros</p>
+
         <Reveal as="p" className="depoimentos__aviso">
           {AVISO_DEPOIMENTOS}
         </Reveal>
