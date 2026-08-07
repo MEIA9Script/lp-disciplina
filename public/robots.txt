@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-# Troque pelo dominio final da pagina
-Sitemap: https://seudominio.com.br/sitemap.xml
+# Trocar se migrar para dominio proprio
+Sitemap: https://disciplina-dinheiro.vercel.app/sitemap.xml
