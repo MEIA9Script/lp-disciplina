@@ -1,0 +1,133 @@
+.planos__grade {
+  display: grid;
+  gap: clamp(1rem, 0.7rem + 1.2vw, 1.5rem);
+  max-width: 58rem;
+  margin-inline: auto;
+}
+
+.plano {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.4rem, 1.1rem + 1.2vw, 2rem);
+  transition:
+    transform var(--medio) var(--ease),
+    border-color var(--medio) var(--ease),
+    box-shadow var(--medio) var(--ease);
+}
+
+.plano:hover {
+  transform: translateY(-4px);
+  border-color: var(--borda-forte);
+}
+
+/* O plano completo e o que a pagina quer vender */
+.plano--destaque {
+  border-color: var(--roxo-linha);
+  background: linear-gradient(160deg, rgba(139, 92, 246, 0.16), rgba(255, 255, 255, 0.02) 60%);
+  box-shadow: var(--sombra-alta), 0 0 40px rgba(139, 92, 246, 0.16);
+}
+
+.plano--destaque:hover {
+  border-color: var(--roxo);
+  box-shadow: var(--sombra-alta), 0 0 52px rgba(139, 92, 246, 0.24);
+}
+
+.plano__etiqueta {
+  position: absolute;
+  top: -0.7rem;
+  right: clamp(1.4rem, 1.1rem + 1.2vw, 2rem);
+  padding: 0.28rem 0.75rem;
+  border-radius: var(--r-pill);
+  background: var(--roxo);
+  color: #f7f3ff;
+  font-family: var(--fonte-display);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: var(--glow-roxo);
+}
+
+.plano__nome {
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--roxo-claro);
+}
+
+.plano--destaque .plano__nome {
+  color: var(--roxo-claro);
+}
+
+.plano__resumo {
+  margin-top: 0.35rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  min-height: 2.7em;
+}
+
+.plano__preco {
+  margin: var(--sp-3) 0 var(--sp-3);
+  padding-bottom: var(--sp-3);
+  border-bottom: 1px solid var(--borda);
+  font-family: var(--fonte-display);
+  font-size: clamp(2rem, 1.6rem + 1.8vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  color: var(--texto);
+}
+
+.plano--destaque .plano__preco {
+  color: var(--roxo-claro);
+  text-shadow: 0 0 34px rgba(139, 92, 246, 0.45);
+}
+
+.plano__lista {
+  display: grid;
+  gap: 0.55rem;
+  margin-bottom: var(--sp-4);
+}
+
+.plano__lista li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  font-size: 0.89rem;
+  line-height: 1.45;
+  color: var(--texto-suave);
+}
+
+.plano__check {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 0.12em;
+  border-radius: 50%;
+  color: var(--roxo);
+  background: var(--roxo-fundo);
+  border: 1px solid var(--roxo-linha);
+}
+
+.plano--destaque .plano__check {
+  color: #f7f3ff;
+  background: var(--roxo);
+  border-color: transparent;
+}
+
+/* O botao acompanha a largura do card em qualquer tela */
+.plano__botao {
+  display: flex;
+  width: 100%;
+  margin-top: auto;
+}
+
+@media (min-width: 760px) {
+  .planos__grade {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+}

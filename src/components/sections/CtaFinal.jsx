@@ -2,7 +2,8 @@ import './CtaFinal.css'
 import Botao from '../ui/Botao'
 import Icone from '../ui/Icone'
 import Reveal from '../ui/Reveal'
-import { CTA_FINAL, HERO } from '../../data/content'
+import { CTA_FINAL, HERO, LINKS } from '../../data/content'
+import { rastrearCheckout } from '../../lib/analytics'
 
 export default function CtaFinal() {
   return (
@@ -36,7 +37,17 @@ export default function CtaFinal() {
             </Botao>
           </div>
 
-          <p className="cta-final__inicial">{CTA_FINAL.inicial}</p>
+          <p className="cta-final__inicial">
+            {CTA_FINAL.inicial}{' '}
+            <a
+              href={LINKS.checkoutInicial}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => rastrearCheckout('cta-final-inicial')}
+            >
+              {CTA_FINAL.inicialLink}
+            </a>
+          </p>
 
           <ul className="cta-final__selos">
             {HERO.selos.map((selo) => (

@@ -126,6 +126,17 @@
   color: var(--texto-suave);
 }
 
+.cta-final__inicial a {
+  color: var(--roxo-claro);
+  border-bottom: 1px solid var(--roxo-linha);
+  transition: color var(--rapido) var(--ease);
+}
+
+.cta-final__inicial a:hover {
+  color: var(--texto);
+  border-bottom-color: var(--texto);
+}
+
 .cta-final__acoes {
   position: relative;
   z-index: 1;
@@ -189,6 +200,17 @@
   margin-top: var(--sp-3);
   font-size: 0.86rem;
   color: var(--texto-suave);
+}
+
+.cta-final__inicial a {
+  color: var(--roxo-claro);
+  border-bottom: 1px solid var(--roxo-linha);
+  transition: color var(--rapido) var(--ease);
+}
+
+.cta-final__inicial a:hover {
+  color: var(--texto);
+  border-bottom-color: var(--texto);
 }
 
 .cta-final__acoes {

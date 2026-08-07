@@ -6,6 +6,7 @@ import Hero from './components/sections/Hero'
 import BannerDesconto from './components/sections/BannerDesconto'
 import Beneficios from './components/sections/Beneficios'
 import Conteudo from './components/sections/Conteudo'
+import Planos from './components/sections/Planos'
 import ParaQuemE from './components/sections/ParaQuemE'
 import ParaQuemNaoE from './components/sections/ParaQuemNaoE'
 import ComoFunciona from './components/sections/ComoFunciona'
@@ -33,6 +34,7 @@ export default function App() {
         <BannerDesconto />
         <Beneficios />
         <Conteudo />
+        <Planos />
         <ParaQuemE />
         <ParaQuemNaoE />
         <ComoFunciona />

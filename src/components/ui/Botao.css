@@ -136,7 +136,7 @@
 }
 
 @media (min-width: 640px) {
-  .botao--bloco {
+  .botao--bloco:not(.plano__botao) {
     display: inline-flex;
     width: auto;
   }

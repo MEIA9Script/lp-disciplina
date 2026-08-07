@@ -6,6 +6,7 @@ import { MARCA } from '../../data/content'
 const NAVEGACAO = [
   { id: 'beneficios', rotulo: 'Benefícios' },
   { id: 'conteudo', rotulo: 'O que você recebe' },
+  { id: 'planos', rotulo: 'Preços' },
   { id: 'como-funciona', rotulo: 'Como funciona' },
   { id: 'faq', rotulo: 'Dúvidas' },
 ]

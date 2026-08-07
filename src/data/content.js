@@ -5,11 +5,9 @@
    ========================================================= */
 
 export const LINKS = {
-  checkout: 'https://pay.lowify.com.br/checkout?product_id=bGpm3F',
+  checkout: 'https://pay.lowify.com.br/checkout.php?product_id=bGpm3F',
+  checkoutInicial: 'https://pay.lowify.com.br/go.php?offer=glz6h75',
   whatsapp: 'https://wa.me/5565999684531',
-  // Ebook inicial: enquanto o checkout proprio nao existir, o botao leva ao WhatsApp.
-  // Assim que tiver o link da Lowify, e so trocar a linha abaixo.
-  checkoutInicial: 'https://wa.me/5565999684531',
 }
 
 /* Valores exibidos na pagina. Trocar aqui atualiza hero, CTA final e FAQ. */
@@ -128,6 +126,48 @@ export const ENTREGAVEIS = [
     texto: 'Novas aulas e materiais adicionados ao produto ficam disponíveis para quem já comprou, sem custo extra.',
   },
 ]
+
+/* ------------------------------ PLANOS ------------------------------ */
+export const PLANOS = {
+  eyebrow: 'Escolha por onde começar',
+  titulo: 'Duas formas de entrar',
+  apoio: 'O inicial constrói a base. O completo leva do primeiro dia ao primeiro cliente.',
+  itens: [
+    {
+      nome: 'Inicial',
+      resumo: 'Para quem quer sair da procrastinação e provar que consegue manter uma rotina.',
+      preco: 'R$ 10,00',
+      destino: 'inicial',
+      botao: 'COMEÇAR POR R$ 10',
+      inclui: [
+        'Por que você trava e como o ciclo da procrastinação se quebra',
+        'O que é disciplina na prática, sem discurso de motivação',
+        'Os exercícios de repetição para treinar todo dia',
+        'As quatro habilidades que o mercado paga',
+        'Os caminhos possíveis, com as plataformas de cada um',
+        'O desafio de 7 dias, com tarefa por dia',
+      ],
+    },
+    {
+      nome: 'Completo',
+      etiqueta: 'Mais escolhido',
+      resumo: 'Tudo do inicial mais a parte que leva você até o primeiro cliente pagante.',
+      preco: 'R$ 34,90',
+      destino: 'checkout',
+      botao: 'QUERO O COMPLETO',
+      destaque: true,
+      inclui: [
+        'Tudo o que está no inicial',
+        'O bloco de execução e a grade de constância',
+        'O protocolo para quando você falhar',
+        'Oito serviços para escolher, com faixa de preço de cada um',
+        'Como montar a lista de clientes e abordar, com sete scripts prontos',
+        'Precificação, modelo de proposta e resposta às objeções',
+        'O plano de 30 dias, com critério de dia cumprido',
+      ],
+    },
+  ],
+}
 
 /* ---------------------------- PARA QUEM É ---------------------------- */
 export const PARA_QUEM_E = [
@@ -320,7 +360,8 @@ export const CTA_FINAL = {
   eyebrow: 'Última chamada',
   preco: 'R$ 34,90',
   precoApoio: 'pagamento único, sem mensalidade',
-  inicial: 'Quer começar mais leve? O material inicial sai por R$ 10,00.',
+  inicial: 'Quer começar mais leve?',
+  inicialLink: 'Comece pelo material inicial, por R$ 10,00',
   titulo: 'A diferença entre quem consegue e quem desiste é o dia de amanhã.',
   texto:
     'Você pode começar hoje com um caminho definido ou continuar tentando manter tudo na cabeça. As vagas com cupom são limitadas ao período em que a condição estiver de pé.',

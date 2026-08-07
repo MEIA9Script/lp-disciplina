@@ -8,7 +8,7 @@ import { LINKS } from '../../data/content'
  * variante: 'compra' -> roxo da marca, acao principal
  *           'zap'    -> verde do WhatsApp, cupom
  *           'linha'  -> link discreto com contorno
- * destino:  'checkout' | 'whatsapp'
+ * destino:  'checkout' (completo) | 'inicial' (R$ 10) | 'whatsapp'
  * origem:   nome da secao, usado no rastreamento de eventos
  */
 export default function Botao({
@@ -21,7 +21,12 @@ export default function Botao({
   bloco = false,
   className = '',
 }) {
-  const href = destino === 'whatsapp' ? LINKS.whatsapp : LINKS.checkout
+  const destinos = {
+    whatsapp: LINKS.whatsapp,
+    inicial: LINKS.checkoutInicial,
+    checkout: LINKS.checkout,
+  }
+  const href = destinos[destino] ?? LINKS.checkout
 
   const aoClicar = () => {
     if (destino === 'whatsapp') rastrearWhatsapp(origem)
