@@ -36,12 +36,7 @@ export default function CtaFinal() {
 
           <p className="cta-final__inicial">
             {CTA_FINAL.inicial}{' '}
-            <a
-              href={LINKS.checkoutInicial}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => rastrearCheckout('cta-final-inicial')}
-            >
+            <a href={LINKS.checkoutInicial} onClick={() => rastrearCheckout('cta-final-inicial')}>
               {CTA_FINAL.inicialLink}
             </a>
           </p>

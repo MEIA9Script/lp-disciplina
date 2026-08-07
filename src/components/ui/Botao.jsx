@@ -10,6 +10,9 @@ import { LINKS } from '../../data/content'
  *           'linha'  -> link discreto com contorno
  * destino:  'checkout' (completo) | 'inicial' (R$ 10) | 'planos' (rola ate a tabela)
  * origem:   nome da secao, usado no rastreamento de eventos
+ *
+ * O checkout abre na mesma aba de proposito: aba nova depende de
+ * pop-up liberado e some atras da janela em parte dos navegadores.
  */
 export default function Botao({
   children,
@@ -47,13 +50,7 @@ export default function Botao({
     .join(' ')
 
   return (
-    <a
-      className={classes}
-      href={href}
-      target={interno ? undefined : '_blank'}
-      rel={interno ? undefined : 'noopener noreferrer'}
-      onClick={aoClicar}
-    >
+    <a className={classes} href={href} onClick={aoClicar}>
       <span className="botao__brilho" aria-hidden="true" />
       <span className="botao__texto">{children}</span>
       {seta && <Icone nome="seta" tamanho={17} className="botao__seta" />}
