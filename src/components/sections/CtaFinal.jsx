@@ -29,8 +29,8 @@ export default function CtaFinal() {
           </div>
 
           <div className="cta-final__acoes">
-            <Botao variante="compra" tamanho="lg" origem="cta-final" bloco>
-              COMPRAR AGORA
+            <Botao variante="compra" tamanho="lg" origem="cta-final" bloco pulsando seta>
+              {CTA_FINAL.botao}
             </Botao>
           </div>
 

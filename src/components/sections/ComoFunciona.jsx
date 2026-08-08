@@ -8,9 +8,9 @@ export default function ComoFunciona() {
     <section className="secao como-funciona" id="como-funciona">
       <div className="container">
         <TituloSecao
-          eyebrow="Como funciona"
+          eyebrow="Depois da compra"
           titulo="Três passos entre agora e a primeira tarefa"
-          apoio="A numeração aqui é literal: um passo depende do anterior e o terceiro acontece hoje."
+          apoio="Nada de espera, de liberação em lote ou de área de membros para descobrir. É um arquivo que chega no seu e-mail."
         />
 
         <ol className="passos">

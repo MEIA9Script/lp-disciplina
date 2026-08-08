@@ -1,13 +1,14 @@
 .hero {
   position: relative;
-  padding-top: clamp(6.5rem, 5rem + 9vw, 9.5rem);
-  padding-bottom: clamp(3rem, 2rem + 5vw, 5rem);
+  /* Menos respiro no topo do celular: o CTA precisa caber na primeira tela */
+  padding-top: clamp(5.25rem, 4.2rem + 8vw, 9rem);
+  padding-bottom: clamp(2.25rem, 1.6rem + 4vw, 4.5rem);
   overflow: hidden;
 }
 
 .hero__interno {
   display: grid;
-  gap: clamp(2.5rem, 1.5rem + 5vw, 4rem);
+  gap: clamp(1.75rem, 1rem + 4vw, 4rem);
 }
 
 /* --- Coluna de texto --- */
@@ -16,17 +17,17 @@
   align-items: center;
   gap: 0.55rem;
   margin-bottom: var(--sp-3);
-  padding: 0.42rem 0.95rem;
+  padding: 0.45rem 0.95rem;
   border-radius: var(--r-pill);
-  background: var(--vidro);
-  border: 1px solid var(--borda-forte);
+  background: var(--roxo-fundo);
+  border: 1px solid var(--roxo-linha);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--texto-suave);
+  color: var(--roxo-claro);
 }
 
 .hero__eyebrow-ponto {
@@ -47,7 +48,7 @@
   text-shadow: 0 0 42px rgba(139, 92, 246, 0.42);
 }
 
-/* Apenas a ultima palavra recebe o traco roxo */
+/* Apenas a ultima palavra recebe o traco */
 .hero__palavra {
   position: relative;
   display: inline-block;
@@ -65,23 +66,50 @@
 
 .hero__subtitulo {
   margin-top: var(--sp-3);
-  max-width: 36rem;
+  max-width: 38rem;
   font-size: var(--t-lead);
-  line-height: 1.62;
+  line-height: 1.6;
+  color: var(--texto-suave);
   text-wrap: pretty;
+}
+
+/* --- Cartao "o que voce recebe", ainda na primeira dobra --- */
+.hero__entrega {
+  margin-top: var(--sp-4);
+  padding: clamp(1rem, 0.85rem + 0.6vw, 1.35rem);
+  border-radius: var(--r-md);
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--borda);
+}
+
+.hero__entrega-titulo {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.75rem;
+  font-family: var(--fonte-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--verde-claro);
+}
+
+.hero__entrega-titulo svg {
+  flex: none;
 }
 
 .hero__lista {
   display: grid;
-  gap: 0.7rem;
-  margin-top: var(--sp-4);
+  gap: 0.6rem;
 }
 
 .hero__item {
   display: flex;
   align-items: flex-start;
-  gap: 0.65rem;
+  gap: 0.6rem;
   font-size: var(--t-corpo);
+  line-height: 1.45;
   color: var(--texto);
 }
 
@@ -91,7 +119,7 @@
   flex: none;
   width: 21px;
   height: 21px;
-  margin-top: 0.18em;
+  margin-top: 0.1em;
   border-radius: 50%;
   color: var(--roxo);
   background: var(--roxo-fundo);
@@ -101,14 +129,35 @@
 /* --- Acoes --- */
 .hero__acoes {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.7rem;
+  justify-items: start;
   margin-top: var(--sp-4);
 }
 
 .hero__nota {
-  font-size: 0.8rem;
-  color: var(--texto-fraco);
+  font-size: 0.83rem;
   line-height: 1.5;
+  color: var(--texto-fraco);
+}
+
+.hero__ancora {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--roxo-claro);
+  border-bottom: 1px solid var(--roxo-linha);
+  padding-bottom: 2px;
+  transition: color var(--rapido) var(--ease);
+}
+
+.hero__ancora:hover {
+  color: var(--texto);
+}
+
+.hero__ancora-seta {
+  transform: rotate(90deg);
 }
 
 /* --- Selos de confianca --- */
@@ -116,7 +165,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem 1.15rem;
-  margin-top: var(--sp-4);
+  margin-top: var(--sp-3);
   padding-top: var(--sp-3);
   border-top: 1px solid var(--borda);
 }
@@ -125,37 +174,51 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.76rem;
+  font-size: 0.8rem;
   color: var(--texto-fraco);
 }
 
 .hero__selo svg {
   color: var(--roxo);
-  opacity: 0.75;
+  opacity: 0.8;
+}
+
+.hero__legenda-visual {
+  margin-top: var(--sp-3);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--texto-fraco);
+  text-align: center;
+}
+
+.hero__legenda-visual strong {
+  color: var(--roxo-claro);
+}
+
+/* No celular o painel entra depois do botao: ele ilustra, nao vende */
+@media (max-width: 1023px) {
+  .hero__visual {
+    order: 2;
+  }
 }
 
 /* --- Tablet --- */
 @media (min-width: 640px) {
-  .hero__acoes {
-    grid-template-columns: auto auto;
-    align-items: center;
-    justify-content: start;
+  .hero__lista {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.7rem 1.2rem;
   }
 
-  .hero__nota {
-    grid-column: 1 / -1;
-  }
 }
 
 /* --- Desktop: texto e painel lado a lado --- */
 @media (min-width: 1024px) {
   .hero__interno {
-    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-columns: 1.08fr 0.92fr;
     align-items: center;
   }
 
   .hero__lista {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.8rem 1.4rem;
+    grid-template-columns: minmax(0, 1fr);
   }
 }

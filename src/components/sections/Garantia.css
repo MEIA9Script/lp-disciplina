@@ -81,9 +81,21 @@
   border-radius: var(--r-md);
   background: rgba(4, 6, 10, 0.42);
   border: 1px solid var(--borda);
-  font-size: 0.88rem;
+  font-size: var(--t-card);
   line-height: 1.55;
   color: var(--texto-suave);
+}
+
+/* O prazo de reembolso e o item que mais tira risco: ganha o verde */
+.garantia__item:first-child {
+  background: var(--verde-fundo);
+  border-color: var(--verde-linha);
+}
+
+.garantia__item:first-child .garantia__check {
+  color: #04060a;
+  background: var(--verde);
+  box-shadow: 0 0 14px rgba(32, 242, 123, 0.45);
 }
 
 .garantia__item strong {
@@ -105,6 +117,19 @@
   color: #f7f3ff;
   background: var(--roxo);
   box-shadow: 0 0 14px rgba(139, 92, 246, 0.45);
+}
+
+.garantia__acao {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  margin-top: var(--sp-4);
+}
+
+@media (min-width: 640px) {
+  .garantia__acao {
+    justify-content: start;
+  }
 }
 
 @media (min-width: 760px) {

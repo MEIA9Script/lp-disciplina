@@ -9,9 +9,9 @@ export default function Resultados() {
     <section className="secao resultados" id="resultados">
       <div className="container">
         <TituloSecao
-          eyebrow="Resultados esperados"
-          titulo="O que costuma mudar quando a rotina se firma"
-          apoio="Nada aqui é promessa de valor ou de prazo. É a descrição honesta do que o método se propõe a construir com você."
+          eyebrow="Expectativa"
+          titulo="O que muda se você aplicar, e o que não vou prometer"
+          apoio="Nenhum valor e nenhum prazo estão garantidos aqui. O que segue é a descrição do que o material se propõe a construir com você."
         />
 
         <div className="resultados__grade">

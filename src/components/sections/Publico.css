@@ -1,45 +1,41 @@
-/* Estilo compartilhado pelas secoes "Para quem é" e "Para quem não é" */
+/* Secao unica com as duas colunas de qualificacao do publico */
 
-.publico__lista {
+.publico__colunas {
   display: grid;
-  gap: 0.7rem;
+  gap: clamp(0.9rem, 0.6rem + 1.2vw, 1.4rem);
 }
 
-.publico__item {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.85rem;
-  padding: 1rem 1.15rem;
-  border-radius: var(--r-md);
-  font-size: 0.96rem;
-  line-height: 1.5;
-  color: var(--texto);
-  transition:
-    transform var(--medio) var(--ease),
-    border-color var(--medio) var(--ease),
-    background var(--medio) var(--ease);
+.publico__coluna {
+  padding: clamp(1.25rem, 1rem + 1vw, 1.85rem);
+  border-radius: var(--r-lg);
+  background: linear-gradient(160deg, var(--vidro-forte), rgba(255, 255, 255, 0.015));
+  border: 1px solid var(--borda);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: var(--sombra-card);
 }
 
-.publico__item:hover {
-  transform: translateX(4px);
-}
-
-.publico__lista--sim .publico__item:hover {
+.publico__coluna--sim {
   border-color: var(--roxo-linha);
 }
 
-.publico__lista--nao .publico__item:hover {
-  border-color: var(--verde-linha);
+.publico__cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: var(--sp-3);
+  padding-bottom: var(--sp-2);
+  border-bottom: 1px solid var(--borda);
+  font-size: 1.08rem;
 }
 
 .publico__marca {
   display: grid;
   place-items: center;
   flex: none;
-  width: 24px;
-  height: 24px;
-  margin-top: 0.1em;
-  border-radius: 8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
 }
 
 .publico__marca--sim {
@@ -49,18 +45,51 @@
 }
 
 .publico__marca--nao {
-  color: var(--verde-claro);
-  background: var(--verde-fundo);
-  border: 1px solid var(--verde-linha);
+  color: var(--texto-suave);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--borda-forte);
 }
 
-/* A secao negativa usa o item mais apagado: ela informa, nao vende */
-.publico--nao .publico__item {
+.publico__lista {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.publico__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: var(--t-card);
+  line-height: 1.5;
+  color: var(--texto);
+}
+
+.publico__ponto {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  margin-top: 0.55em;
+  border-radius: 2px;
+}
+
+.publico__ponto--sim {
+  background: var(--roxo);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.6);
+}
+
+.publico__ponto--nao {
+  background: transparent;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+/* A coluna negativa informa, nao vende: fica mais apagada */
+.publico__coluna--nao .publico__item {
   color: var(--texto-suave);
 }
 
-@media (min-width: 720px) {
-  .publico__lista {
+@media (min-width: 860px) {
+  .publico__colunas {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
   }
 }

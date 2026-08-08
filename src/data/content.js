@@ -2,6 +2,10 @@
    CONTEUDO DA PAGINA
    Toda a copy fica aqui. Para ajustar textos, edite este arquivo
    e nao os componentes.
+
+   Regra da pagina: nada de numero inventado, nada de promessa de
+   ganho e nada de prova social que nao exista. Tudo o que esta
+   descrito abaixo esta dentro do PDF que o comprador recebe.
    ========================================================= */
 
 export const LINKS = {
@@ -9,7 +13,7 @@ export const LINKS = {
   checkoutInicial: 'https://pay.lowify.com.br/checkout?product_id=1FmEMW',
 }
 
-/* Valores exibidos na pagina. Trocar aqui atualiza hero, CTA final e FAQ. */
+/* Valores exibidos na pagina. Trocar aqui atualiza hero, oferta e FAQ. */
 export const PRECOS = {
   completo: 'R$ 34,90',
   inicial: 'R$ 10,00',
@@ -22,190 +26,201 @@ export const MARCA = {
   ano: new Date().getFullYear(),
 }
 
-/* ----------------------------- HERO ----------------------------- */
+/* ----------------------------- HERO -----------------------------
+   Primeira dobra: o que e o produto, o que muda, o que vem dentro,
+   quanto custa e o botao. Tudo isso antes de qualquer rolagem.
+   ---------------------------------------------------------------- */
 export const HERO = {
-  eyebrow: 'Método de execução para renda extra',
+  eyebrow: 'Ebook em PDF · 74 páginas',
   // A headline e quebrada em tres partes: base, destaque e a palavra sublinhada.
-  titulo: ['Transforme disciplina em uma', 'máquina de gerar', 'dinheiro.'],
+  titulo: ['Você já sabe o que fazer.', 'O problema é', 'fazer todo dia.'],
   subtitulo:
-    'A maioria não falha por falta de ideia. Falha por falta de rotina. Aqui você monta o sistema de execução diária que faz um projeto de renda extra sair do papel e continuar de pé no mês seguinte.',
-  beneficios: [
-    'Rotina montada para quem tem pouco tempo livre',
-    'Passo a passo do primeiro projeto de renda online',
-    'Método para não parar na terceira semana',
-    'Acesso imediato, direto no seu e-mail',
+    'Um ebook com duas coisas dentro: o sistema que faz você executar mesmo nos dias ruins e o passo a passo para vender um serviço digital para negócio pequeno.',
+  entregaTitulo: 'O que você recebe hoje',
+  entrega: [
+    'Ebook completo em PDF, 74 páginas',
+    'Plano de 30 dias com a tarefa de cada dia',
+    'Grade de constância para imprimir',
+    'Scripts de abordagem e modelo de proposta',
   ],
-  selos: ['Acesso imediato', 'Compra 100% online', 'Assista quando quiser'],
+  cta: 'QUERO O EBOOK · R$ 34,90',
+  notaCta: 'Pagamento único no Pix ou no cartão. O PDF chega no seu e-mail em poucos minutos.',
+  ancora: 'Ver tudo que vem dentro',
+  selos: ['Acesso imediato', 'Pix ou cartão', '7 dias de garantia'],
 }
 
-/* --------------------------- BENEFICIOS --------------------------- */
-export const BENEFICIOS = [
-  {
-    icone: 'alvo',
-    titulo: 'Foco em uma coisa só',
-    texto:
-      'Você para de pular de método em método e escolhe um caminho para executar até dar resultado, com critério para decidir o que ignorar.',
-  },
-  {
-    icone: 'relogio',
-    titulo: 'Cabe na sua semana real',
-    texto:
-      'Blocos curtos de execução pensados para quem trabalha, estuda ou cuida da casa. Sem depender de acordar às 5 da manhã.',
-  },
-  {
-    icone: 'grade',
-    titulo: 'Constância medida, não sentida',
-    texto:
-      'Você acompanha sua execução em uma grade simples. Quando o dia não sai, fica visível na hora e você corrige na mesma semana.',
-  },
-  {
-    icone: 'raio',
-    titulo: 'Do zero ao primeiro projeto',
-    texto:
-      'Um roteiro para escolher, montar e colocar no ar seu primeiro projeto de renda online sem travar na parte técnica.',
-  },
-  {
-    icone: 'escudo',
-    titulo: 'Sistema à prova de desânimo',
-    texto:
-      'Protocolo para os dias ruins: o que fazer quando a motivação some e como voltar sem perder tudo o que já foi construído.',
-  },
-  {
-    icone: 'grafico',
-    titulo: 'Decisão por número',
-    texto:
-      'Você aprende a olhar os poucos indicadores que importam e a decidir com base neles, em vez de decidir por impulso.',
-  },
-]
+/* ---------------------------- MECANISMO ----------------------------
+   A explicacao curta de por que isso nao e "ter motivacao".
+   Tres pecas, nao seis: o visitante precisa entender rapido e descer
+   para a oferta.
+   ------------------------------------------------------------------- */
+export const MECANISMO = {
+  eyebrow: 'Como funciona por dentro',
+  titulo: 'Não é motivação. É um sistema de três peças.',
+  apoio:
+    'Motivação dura três dias. O que sustenta trinta são três peças de rotina, e o ebook monta as três com você.',
+  pecas: [
+    {
+      icone: 'relogio',
+      numero: '01',
+      titulo: 'O bloco de execução',
+      texto:
+        'De 20 a 45 minutos por dia, no mesmo horário, com uma tarefa só, escolhida antes de começar. Existe a versão mínima de cinco minutos para o dia em que tudo deu errado. Dia fraco conta, dia zerado não.',
+    },
+    {
+      icone: 'grade',
+      numero: '02',
+      titulo: 'A grade de constância',
+      texto:
+        '35 quadrados, um por dia. Você pinta o dia cumprido e deixa o dia perdido vazio, sem apagar. A regra é uma: nunca dois vazios seguidos. Ver a sequência na parede cobra mais que qualquer alarme no celular.',
+    },
+    {
+      icone: 'escudo',
+      numero: '03',
+      titulo: 'O protocolo de recaída',
+      texto:
+        'Você vai falhar, isso é estatística. O protocolo diz o que fazer nas 24 horas seguintes: não recomeçar do zero, escrever a causa em uma linha, mudar uma variável só e executar hoje, nem que sejam cinco minutos.',
+    },
+  ],
+  fecho:
+    'Com o sistema de pé, a segunda metade do ebook aponta ele para uma coisa concreta: escolher um serviço, montar a lista de clientes, abordar, cobrar e enviar proposta.',
+}
 
-/* ----------------------- O QUE VOCÊ VAI RECEBER ----------------------- */
+/* ----------------------- O QUE VOCÊ VAI RECEBER -----------------------
+   Lista compacta de proposito: essa secao fica entre o mecanismo e o
+   preco, e cada card grande aqui empurrava a oferta uma tela para
+   baixo no celular. A descricao longa de cada item vive no ebook,
+   nao na landing.
+   ---------------------------------------------------------------------- */
 export const ENTREGAVEIS = [
   {
     etiqueta: 'Núcleo',
-    titulo: 'Método completo em módulos',
-    texto:
-      'Todo o conteúdo organizado em aulas objetivas, na ordem certa de aplicação. Sem enrolação e sem aula de uma hora para explicar cinco minutos.',
+    titulo: 'Ebook completo em PDF, 74 páginas',
+    texto: 'Dezenove capítulos, do ciclo da procrastinação até a proposta enviada.',
   },
   {
     etiqueta: 'Prática',
-    titulo: 'Plano de execução de 30 dias',
-    texto: 'O que fazer em cada dia do primeiro mês, com tarefa definida e critério claro de dia cumprido.',
+    titulo: 'Plano de 30 dias, dia a dia',
+    texto: 'Uma tarefa escrita para cada dia, dividida em quatro semanas com objetivo próprio.',
   },
   {
     etiqueta: 'Ferramenta',
-    titulo: 'Grade de constância',
-    texto: 'O painel que usei para não quebrar a sequência, pronto para você imprimir ou usar no celular.',
+    titulo: 'Grade de constância de 35 dias',
+    texto: 'A folha para imprimir e colar na parede, com a legenda e a regra das duas falhas.',
   },
   {
-    etiqueta: 'Ferramenta',
-    titulo: 'Checklist do projeto de renda',
-    texto: 'Lista com as etapas de montagem do projeto, para você marcar o que já está feito e ver o que falta.',
+    etiqueta: 'Escolha',
+    titulo: 'Oito serviços com faixa de preço',
+    texto: 'Cada um com o tempo médio para aprender e o valor praticado no mercado.',
   },
   {
-    etiqueta: 'Apoio',
-    titulo: 'Protocolo de recaída',
-    texto: 'O passo a passo para voltar depois de falhar dois, cinco ou quinze dias, sem começar tudo de novo.',
+    etiqueta: 'Vendas',
+    titulo: 'Scripts de abordagem e retomada',
+    texto: 'Mensagem de WhatsApp, de direct e as duas retomadas, prontas para adaptar.',
   },
   {
-    etiqueta: 'Acesso',
-    titulo: 'Atualizações incluídas',
-    texto: 'Novas aulas e materiais adicionados ao produto ficam disponíveis para quem já comprou, sem custo extra.',
+    etiqueta: 'Fechamento',
+    titulo: 'Proposta, preço e objeções',
+    texto: 'O modelo de proposta em seis blocos, as três formas de precificar e as quatro objeções.',
   },
 ]
 
-/* ------------------------------ PLANOS ------------------------------ */
-export const PLANOS = {
-  eyebrow: 'Escolha por onde começar',
-  titulo: 'Duas formas de entrar',
-  apoio: 'O inicial constrói a base. O completo leva do primeiro dia ao primeiro cliente.',
-  itens: [
-    {
-      nome: 'Inicial',
-      resumo: 'Para quem quer sair da procrastinação e provar que consegue manter uma rotina.',
-      preco: 'R$ 10,00',
-      destino: 'inicial',
-      botao: 'COMEÇAR POR R$ 10',
-      inclui: [
-        'Por que você trava e como o ciclo da procrastinação se quebra',
-        'O que é disciplina na prática, sem discurso de motivação',
-        'Os exercícios de repetição para treinar todo dia',
-        'As quatro habilidades que o mercado paga',
-        'Os caminhos possíveis, com as plataformas de cada um',
-        'O desafio de 7 dias, com tarefa por dia',
-      ],
-    },
-    {
-      nome: 'Completo',
-      etiqueta: 'Mais escolhido',
-      resumo: 'Tudo do inicial mais a parte que leva você até o primeiro cliente pagante.',
-      preco: 'R$ 34,90',
-      destino: 'checkout',
-      botao: 'QUERO O COMPLETO',
-      destaque: true,
-      inclui: [
-        'Tudo o que está no inicial',
-        'O bloco de execução e a grade de constância',
-        'O protocolo para quando você falhar',
-        'Oito serviços para escolher, com faixa de preço de cada um',
-        'Como montar a lista de clientes e abordar, com sete scripts prontos',
-        'Precificação, modelo de proposta e resposta às objeções',
-        'O plano de 30 dias, com critério de dia cumprido',
-      ],
-    },
+/* ------------------------------ OFERTA ------------------------------
+   Aparece logo depois do mecanismo e da lista de entregaveis.
+   Um preco em destaque, o inicial como alternativa discreta.
+   -------------------------------------------------------------------- */
+export const OFERTA = {
+  eyebrow: 'A oferta',
+  titulo: 'Tudo isso por R$ 34,90, uma vez só',
+  apoio:
+    'Sem assinatura, sem mensalidade e sem plano anual. Você paga uma vez, baixa o PDF e o arquivo fica com você.',
+  inclui: [
+    'Ebook completo em PDF, 74 páginas, 19 capítulos',
+    'Plano de 30 dias com a tarefa de cada dia',
+    'Grade de constância de 35 dias para imprimir',
+    'Bloco de execução e protocolo de recaída',
+    'Oito serviços com faixa de preço de mercado',
+    'Scripts de abordagem, retomadas e lista de clientes',
+    'Modelo de proposta, precificação e as quatro objeções',
+    'Os quatro números da revisão semanal',
   ],
+  precoRotulo: 'Você paga hoje',
+  preco: 'R$ 34,90',
+  precoApoio: 'pagamento único, no Pix ou no cartão',
+  comparacao: 'Custa menos que um lanche com refrigerante. A diferença é que o lanche acaba em dez minutos.',
+  botao: 'QUERO O EBOOK COMPLETO',
+  microcopy: 'Pagamento em ambiente seguro da plataforma. O PDF chega no seu e-mail em poucos minutos.',
+  formas: ['Pix', 'Cartão', 'Acesso imediato'],
+  risco: {
+    titulo: '7 dias de garantia',
+    texto:
+      'Baixou, leu e concluiu que não é para você? Peça o reembolso em até 7 dias pelo e-mail de contato e o valor volta. É o seu direito pelo Código de Defesa do Consumidor, e aqui ele é cumprido sem discussão.',
+  },
+  alternativa: {
+    etiqueta: 'Prefere começar mais leve?',
+    nome: 'Material inicial',
+    preco: 'R$ 10,00',
+    texto:
+      'A base em 45 páginas: por que você trava, o que é disciplina na prática, os exercícios de repetição, as habilidades que o mercado paga e o desafio de 7 dias. Não tem a parte de serviço, preço, scripts e plano de 30 dias.',
+    botao: 'COMEÇAR PELO INICIAL, R$ 10',
+  },
 }
-
-/* ---------------------------- PARA QUEM É ---------------------------- */
-export const PARA_QUEM_E = [
-  'Quer começar a gerar renda extra pela internet e ainda não sabe por onde começar',
-  'Já tentou antes, empolgou nos primeiros dias e parou na terceira semana',
-  'Tem pouco tempo livre e precisa de uma rotina que caiba na vida real',
-  'Consome muito conteúdo, salva tudo e executa pouco',
-  'Quer um caminho definido em vez de mais uma lista de dicas soltas',
-  'Está disposto a aplicar todos os dias, mesmo que em blocos curtos',
-]
-
-export const PARA_QUEM_NAO_E = [
-  'Procura enriquecer rápido ou ganhar dinheiro sem trabalhar',
-  'Quer um método automático que funcione sozinho enquanto você dorme',
-  'Não pretende reservar nem alguns minutos por dia para executar',
-  'Espera garantia de valores ou de prazo para o primeiro resultado',
-  'Compra cursos para colecionar e nunca abre o material',
-  'Não aceita ajustar a própria rotina em nada',
-]
 
 /* --------------------------- COMO FUNCIONA --------------------------- */
 export const PASSOS = [
   {
     numero: '01',
-    titulo: 'Compre pelo checkout',
-    texto: 'Pagamento em ambiente seguro da plataforma, no cartão ou no Pix, em poucos minutos.',
+    titulo: 'Você compra pelo checkout',
+    texto: 'Pagamento em ambiente seguro da plataforma, no Pix ou no cartão. Leva menos de dois minutos.',
   },
   {
     numero: '02',
-    titulo: 'Receba o acesso',
-    texto: 'Assim que o pagamento é confirmado, o acesso chega no e-mail cadastrado na compra.',
+    titulo: 'O PDF chega no e-mail',
+    texto: 'Assim que o pagamento é aprovado, o arquivo vai para o e-mail cadastrado na compra. Baixou, é seu.',
   },
   {
     numero: '03',
-    titulo: 'Aplique no mesmo dia',
-    texto: 'Você começa pelo plano de 30 dias e executa a primeira tarefa ainda hoje, sem esperar segunda-feira.',
+    titulo: 'Você começa o dia 1 hoje',
+    texto: 'A primeira tarefa do plano é montar o bloco e a grade. Dá para fazer hoje à noite, sem esperar segunda.',
   },
 ]
+
+/* ---------------------------- PARA QUEM É ---------------------------- */
+export const PUBLICO = {
+  eyebrow: 'Antes de comprar',
+  titulo: 'Vale a pena para você?',
+  apoio: 'Prefiro perder a venda agora a ter alguém frustrado depois. Leia as duas colunas antes de decidir.',
+  sim: [
+    'Quer começar a gerar renda extra pela internet e não sabe por onde começar',
+    'Já tentou antes, empolgou nos primeiros dias e parou na terceira semana',
+    'Tem pouco tempo livre e precisa de uma rotina que caiba na vida real',
+    'Consome muito conteúdo, salva tudo e executa pouco',
+    'Quer um caminho definido em vez de mais uma lista de dicas soltas',
+    'Aceita executar todos os dias, mesmo que em blocos curtos',
+  ],
+  nao: [
+    'Procura enriquecer rápido ou ganhar dinheiro sem trabalhar',
+    'Quer um método automático que rode sozinho enquanto você dorme',
+    'Não pretende reservar nem alguns minutos por dia para executar',
+    'Espera garantia de valor ou de prazo para o primeiro resultado',
+    'Compra material para colecionar e nunca abre o arquivo',
+    'Não aceita mudar nada na própria rotina',
+  ],
+}
 
 /* ------------------------ RESULTADOS ESPERADOS ------------------------ */
 export const RESULTADOS = [
   {
     titulo: 'Uma rotina que você consegue manter',
-    texto: 'Um bloco de execução fixo na sua semana, com tarefa definida e sem depender de motivação.',
+    texto: 'Um bloco de execução fixo na semana, com tarefa definida e sem depender de estar motivado.',
   },
   {
     titulo: 'Clareza sobre o próximo passo',
-    texto: 'Você abre o dia sabendo exatamente o que fazer, em vez de gastar a energia decidindo por onde começar.',
+    texto: 'Você abre o dia sabendo o que fazer, em vez de gastar a energia decidindo por onde começar.',
   },
   {
-    titulo: 'Um projeto real no ar',
-    texto: 'Sair do plano mental e ter algo publicado, funcionando e pronto para ser melhorado com o tempo.',
+    titulo: 'Um serviço escolhido e ofertado',
+    texto: 'Sair da ideia solta e ter um serviço definido, uma lista de negócios e mensagens enviadas de verdade.',
   },
   {
     titulo: 'Menos abandono no meio',
@@ -213,134 +228,110 @@ export const RESULTADOS = [
   },
 ]
 
-export const AVISO_RESULTADOS =
-  'Os itens acima descrevem o que o método se propõe a construir. Não existe garantia de ganho financeiro, valor ou prazo: o resultado depende da aplicação individual, do tempo dedicado e do contexto de cada pessoa.'
+/* Versao curta, exibida na letra miuda da oferta */
+export const AVISO_OFERTA =
+  'Produto digital de educação. Não existe garantia de ganho financeiro, de valor ou de prazo: o resultado depende da aplicação de cada pessoa.'
 
-/* ---------------------------- DEPOIMENTOS ---------------------------- */
-/* Depoimentos ilustrativos, criados para demonstrar o layout.
-   Substitua por relatos reais de alunos antes de publicar a página,
-   junto com fotos autorizadas (troque `iniciais` por `foto`). */
-export const DEPOIMENTOS = [
-  {
-    nome: 'Ana Ribeiro',
-    contexto: 'Auxiliar administrativa, Cuiabá',
-    iniciais: 'AR',
-    nota: 5,
-    texto:
-      'O que mudou para mim foi o bloco de execução. Vinte minutos por dia, sempre no mesmo horário. Foi a primeira vez que cheguei ao fim de um mês sem largar no meio.',
-  },
-  {
-    nome: 'Marcos Tadeu',
-    contexto: 'Motorista de aplicativo, Goiânia',
-    iniciais: 'MT',
-    nota: 5,
-    texto:
-      'Eu já tinha comprado três cursos e não terminei nenhum. Aqui o material é curto e cada aula termina com uma tarefa. Isso me segurou.',
-  },
-  {
-    nome: 'Juliana Prado',
-    contexto: 'Estudante, Campinas',
-    iniciais: 'JP',
-    nota: 5,
-    texto:
-      'A grade de constância parece boba até você usar. Ver o dia em branco incomoda mais do que qualquer alarme no celular.',
-  },
-  {
-    nome: 'Rafael Nunes',
-    contexto: 'Vendedor, Belo Horizonte',
-    iniciais: 'RN',
-    nota: 4,
-    texto:
-      'Achei o começo mais duro do que esperava, porque exige escolher uma coisa só. Depois que aceitei isso, o resto ficou bem mais simples.',
-  },
-  {
-    nome: 'Camila Souza',
-    contexto: 'Mãe e autônoma, Recife',
-    iniciais: 'CS',
-    nota: 5,
-    texto:
-      'Consigo aplicar depois que as crianças dormem. O protocolo para dia ruim salvou minha semana mais de uma vez.',
-  },
-  {
-    nome: 'Diego Martins',
-    contexto: 'Técnico de TI, Curitiba',
-    iniciais: 'DM',
-    nota: 5,
-    texto:
-      'Gostei de ter indicador para acompanhar. Parei de decidir no achismo e passei a olhar o que estava realmente andando.',
-  },
-]
+export const AVISO_RESULTADOS =
+  'Os itens acima descrevem o que o material se propõe a construir. Não existe garantia de ganho financeiro, de valor ou de prazo: o resultado depende da aplicação individual, do tempo dedicado e do contexto de cada pessoa.'
+
+/* ---------------------------- DEPOIMENTOS ----------------------------
+   A secao esta FORA da pagina de proposito (veja src/App.jsx).
+   Os relatos abaixo sao ilustrativos e nao podem ir ao ar como se
+   fossem reais. Quando existirem depoimentos de verdade, com
+   autorizacao, substitua a lista e volte a secao no App.
+   ---------------------------------------------------------------------- */
+export const DEPOIMENTOS = []
 
 /* ----------------------------- GARANTIA ----------------------------- */
 export const GARANTIA = {
-  titulo: 'Compra segura, do começo ao fim',
+  eyebrow: 'Risco zero',
+  titulo: 'O risco é meu, não seu',
   texto:
-    'O pagamento acontece em ambiente criptografado da plataforma, que também cuida da liberação do acesso e do suporte da transação. Seus dados de pagamento não passam por esta página.',
+    'Você tem 7 dias para ler o material inteiro e decidir. Se concluir que não serve para o seu caso, escreve para o e-mail de contato e o valor volta, sem questionário e sem enrolação.',
   itens: [
-    { titulo: 'Ambiente protegido', texto: 'Checkout com criptografia e processamento feito pela plataforma de pagamento.' },
-    { titulo: 'Acesso confirmado por e-mail', texto: 'Você recebe os dados de acesso assim que o pagamento é aprovado.' },
-    { titulo: 'Direitos do consumidor', texto: 'Sua compra é amparada pelo Código de Defesa do Consumidor, conforme os prazos e as condições exibidos no checkout.' },
-    { titulo: 'Suporte por e-mail', texto: 'Qualquer dúvida sobre acesso ou pagamento é respondida pelo e-mail de contato.' },
+    {
+      titulo: '7 dias para pedir o dinheiro de volta',
+      texto: 'Prazo contado a partir da compra, conforme o artigo 49 do Código de Defesa do Consumidor.',
+    },
+    {
+      titulo: 'Ambiente de pagamento protegido',
+      texto: 'O checkout é da plataforma, com criptografia. Nenhum dado de cartão passa por esta página.',
+    },
+    {
+      titulo: 'Entrega confirmada por e-mail',
+      texto: 'O PDF vai para o e-mail da compra assim que o pagamento é aprovado. Vale conferir o spam.',
+    },
+    {
+      titulo: 'Suporte por e-mail',
+      texto: 'Dúvida sobre acesso, pagamento ou reembolso é respondida pelo e-mail de contato.',
+    },
   ],
 }
 
 /* -------------------------------- FAQ -------------------------------- */
 export const FAQ = [
   {
-    pergunta: 'Preciso de experiência para começar?',
+    pergunta: 'É ebook em PDF ou curso em vídeo?',
     resposta:
-      'Não. O material começa pela organização da rotina e só depois avança para a execução do projeto. Quem está do zero segue a mesma ordem, sem pular etapa.',
+      'É um ebook em PDF, com 74 páginas. Você baixa o arquivo, lê no celular, no computador ou imprime. Não tem plataforma de aula, login nem prazo de acesso: o arquivo fica com você.',
+  },
+  {
+    pergunta: 'Isso é diferente do que já tem de graça na internet?',
+    resposta:
+      'O que tem de graça costuma ser conselho solto. Aqui tudo está na ordem de aplicação e com o critério de execução junto: o tamanho do bloco, o que conta como dia cumprido, o que fazer depois de falhar, o texto da mensagem, os seis blocos da proposta e o que responder em cada objeção. A diferença não está na informação, está em ter uma sequência para seguir.',
+  },
+  {
+    pergunta: 'Preciso de experiência ou de alguma habilidade técnica?',
+    resposta:
+      'Não. O material começa pela rotina e só depois entra na parte de serviço. Os oito serviços listados vêm com o tempo médio de aprendizado de cada um, e os mais rápidos levam de três dias a uma semana.',
   },
   {
     pergunta: 'Quanto tempo por dia eu preciso ter?',
     resposta:
-      'O método trabalha com blocos curtos de execução diária. A ideia é justamente caber na rotina de quem trabalha ou estuda, então não depende de você ter horas livres.',
+      'De 20 a 45 minutos por dia, e existe a versão mínima de cinco minutos para os dias impossíveis. O sistema foi montado justamente para quem trabalha ou estuda o dia inteiro.',
   },
   {
-    pergunta: 'Como eu recebo o acesso?',
+    pergunta: 'Já tentei outras coisas e parei no meio. Vai ser diferente?',
     resposta:
-      'Pelo e-mail cadastrado na compra, assim que o pagamento é confirmado pela plataforma. Vale conferir a caixa de spam nos primeiros minutos.',
+      'A parada no meio é o problema que o material trata primeiro, antes de qualquer coisa sobre dinheiro. O bloco, a grade e o protocolo de recaída existem exatamente para o dia em que a vontade acabar. Nenhum deles depende de você estar motivado.',
   },
   {
-    pergunta: 'Por quanto tempo fico com o material?',
+    pergunta: 'Vou precisar comprar mais alguma coisa depois?',
     resposta:
-      'O prazo de acesso é o informado pela plataforma na hora da compra. As atualizações lançadas dentro desse período ficam disponíveis para você sem custo adicional.',
+      'Não. O ebook completo é fechado em si mesmo, do primeiro dia à proposta enviada. No fim do material existe um convite opcional para acompanhamento comigo, mas nada do que está no plano depende disso.',
+  },
+  {
+    pergunta: 'Como eu recebo e em quanto tempo?',
+    resposta:
+      'O PDF chega no e-mail cadastrado na compra assim que o pagamento é aprovado, o que costuma levar poucos minutos no Pix. Se não aparecer, confira o spam e depois escreva para o e-mail de contato.',
+  },
+  {
+    pergunta: 'E se eu não gostar?',
+    resposta:
+      'Você tem 7 dias para pedir o reembolso pelo e-mail de contato e receber o valor de volta, conforme o Código de Defesa do Consumidor. Nenhuma pergunta, nenhum formulário.',
   },
   {
     pergunta: 'Isso é promessa de ganho rápido?',
     resposta:
-      'Não, e essa página não faria isso. O que você recebe é método e rotina de execução. O resultado depende da sua aplicação e nenhum valor é garantido.',
+      'Não, e esta página não faria isso. O que você recebe é método, rotina e um caminho de venda de serviço. Quanto você ganha, se ganhar, depende da sua aplicação, e nenhum valor é garantido aqui.',
   },
   {
-    pergunta: 'Serve para qual tipo de renda extra?',
+    pergunta: 'Qual a diferença entre o inicial de R$ 10 e o completo?',
     resposta:
-      'O sistema de execução é o mesmo para qualquer projeto digital. O plano de 30 dias usa um caminho inicial definido para quem ainda não escolheu por onde começar.',
-  },
-  {
-    pergunta: 'Funciona só pelo celular?',
-    resposta:
-      'Sim, dá para assistir e aplicar pelo celular. Algumas tarefas ficam mais confortáveis no computador, mas nenhuma delas depende disso.',
-  },
-  {
-    pergunta: 'Quanto custa e quais formas de pagamento são aceitas?',
-    resposta:
-      'O método completo sai por R$ 34,90, em pagamento único. Existe também o material inicial, mais curto, por R$ 10,00. As formas disponíveis, incluindo cartão e Pix, aparecem no checkout da plataforma.',
-  },
-  {
-    pergunta: 'Qual a diferença entre o inicial e o completo?',
-    resposta:
-      'O inicial trabalha a base: por que você trava, o que é disciplina na prática e o desafio de 7 dias. O completo tem tudo isso mais a parte que leva ao primeiro cliente, com os serviços e preços, os scripts de abordagem, a proposta e o plano de 30 dias.',
+      'O inicial tem 45 páginas e trabalha a base: por que você trava, o que é disciplina na prática, os exercícios de repetição, as habilidades que o mercado paga e o desafio de 7 dias. O completo tem 74 páginas com tudo isso mais a parte que leva ao primeiro cliente: os oito serviços com preço, a lista de clientes, os scripts, a proposta, as objeções e o plano de 30 dias.',
   },
 ]
 
 /* ------------------------------ CTA FINAL ------------------------------ */
 export const CTA_FINAL = {
-  eyebrow: 'Última chamada',
+  eyebrow: 'Decisão',
   preco: 'R$ 34,90',
-  precoApoio: 'pagamento único, sem mensalidade',
-  inicial: 'Quer começar mais leve?',
+  precoApoio: 'pagamento único, com 7 dias de garantia',
+  inicial: 'Ainda em dúvida?',
   inicialLink: 'Comece pelo material inicial, por R$ 10,00',
-  titulo: 'A diferença entre quem consegue e quem desiste é o dia de amanhã.',
+  titulo: 'Amanhã você vai estar 24 horas mais velho de qualquer jeito.',
   texto:
-    'Você pode começar hoje com um caminho definido ou continuar tentando manter tudo na cabeça. O acesso é liberado assim que o pagamento é confirmado.',
+    'A única pergunta é se vai estar com o dia 1 feito ou no mesmo lugar. O PDF chega no seu e-mail em poucos minutos e a primeira tarefa dá para fazer hoje à noite.',
+  botao: 'COMPRAR AGORA · R$ 34,90',
 }

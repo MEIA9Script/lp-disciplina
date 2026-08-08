@@ -1,38 +1,44 @@
 import './Conteudo.css'
-import Botao from '../ui/Botao'
 import Icone from '../ui/Icone'
 import Reveal from '../ui/Reveal'
 import TituloSecao from '../ui/TituloSecao'
 import { ENTREGAVEIS } from '../../data/content'
 
+/**
+ * O que vem dentro do PDF.
+ *
+ * Lista, nao grade de cards: esta secao fica entre o mecanismo e o
+ * preco, e seis cards altos empurravam a oferta uma tela inteira para
+ * baixo no celular. Sem botao proprio, porque a secao emenda na oferta.
+ */
 export default function Conteudo() {
   return (
     <section className="secao conteudo" id="conteudo">
-      <div className="container">
+      <div className="container container--estreito">
         <TituloSecao
-          eyebrow="O que você vai receber"
-          titulo="Tudo que entra no acesso"
-          apoio="Material, ferramentas e apoio de execução. Nada aqui é bônus enfeitado para inflar a lista."
+          eyebrow="O que você recebe"
+          titulo="Seis coisas dentro de um arquivo só"
+          apoio="Nada de bônus inventado para inflar a lista."
         />
 
-        <div className="conteudo__grade">
+        <ul className="conteudo__lista">
           {ENTREGAVEIS.map((item, i) => (
-            <Reveal key={item.titulo} as="article" className="entrega vidro" atraso={i * 65}>
-              <div className="entrega__topo">
-                <span className="entrega__etiqueta">{item.etiqueta}</span>
-                <Icone nome="mais" tamanho={16} className="entrega__mais" />
+            <Reveal key={item.titulo} as="li" className="entrega" atraso={i * 55}>
+              <span className="entrega__check" aria-hidden="true">
+                <Icone nome="check" tamanho={13} />
+              </span>
+              <div className="entrega__corpo">
+                {/* A etiqueta de categoria saiu daqui: no celular ela quebrava
+                    o titulo em duas linhas e engordava a lista inteira. */}
+                <h3 className="entrega__titulo">{item.titulo}</h3>
+                <p className="entrega__texto">{item.texto}</p>
               </div>
-              <h3 className="entrega__titulo">{item.titulo}</h3>
-              <p className="entrega__texto">{item.texto}</p>
             </Reveal>
           ))}
-        </div>
+        </ul>
 
-        <Reveal className="conteudo__rodape">
-          <p className="conteudo__frase">Acesso liberado por e-mail assim que o pagamento é aprovado.</p>
-          <Botao variante="compra" origem="conteudo">
-            QUERO ACESSAR AGORA
-          </Botao>
+        <Reveal as="p" className="conteudo__ponte">
+          Agora a parte que você desceu a página para ver.
         </Reveal>
       </div>
     </section>

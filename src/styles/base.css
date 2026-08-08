@@ -26,6 +26,8 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  /* A barra fixa de compra cobre o fim da pagina se o corpo nao reservar espaco */
+  padding-bottom: calc(4.5rem + env(safe-area-inset-bottom));
 }
 
 /* Atmosfera do fundo: dois halos fixos (verde e roxo) atras de todo o conteudo */

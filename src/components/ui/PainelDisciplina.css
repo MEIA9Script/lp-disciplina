@@ -235,3 +235,20 @@
   color: #f7f3ff;
   box-shadow: 0 0 14px rgba(139, 92, 246, 0.55);
 }
+
+/* --- Celular: versao compacta ---
+   No mobile o painel fica abaixo do botao de compra e so serve como
+   prova visual do que o produto entrega. Ele nao pode custar uma tela
+   inteira de rolagem antes do preco, entao a legenda, as metricas e a
+   tarefa saem de cena e sobra a grade. */
+@media (max-width: 1023px) {
+  .painel__legenda,
+  .painel__metricas {
+    display: none;
+  }
+
+  .painel__tarefa {
+    padding: 0.7rem 0.85rem;
+    font-size: 0.8rem;
+  }
+}

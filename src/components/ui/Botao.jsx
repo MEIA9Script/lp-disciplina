@@ -8,7 +8,7 @@ import { LINKS } from '../../data/content'
  *
  * variante: 'compra' -> roxo da marca, acao principal
  *           'linha'  -> link discreto com contorno
- * destino:  'checkout' (completo) | 'inicial' (R$ 10) | 'planos' (rola ate a tabela)
+ * destino:  'checkout' (completo) | 'inicial' (R$ 10) | 'oferta' (rola ate a oferta)
  * origem:   nome da secao, usado no rastreamento de eventos
  *
  * O checkout abre na mesma aba de proposito: aba nova depende de
@@ -28,13 +28,13 @@ export default function Botao({
   const destinos = {
     inicial: LINKS.checkoutInicial,
     checkout: LINKS.checkout,
-    planos: '#planos',
+    oferta: '#oferta',
   }
   const href = destinos[destino] ?? LINKS.checkout
-  const interno = destino === 'planos'
+  const interno = destino === 'oferta'
 
   const aoClicar = () => {
-    if (interno) rastrear('ViewContent', { content_name: 'Tabela de valores', origem })
+    if (interno) rastrear('ViewContent', { content_name: 'Oferta', origem })
     else rastrearCheckout(origem)
   }
 

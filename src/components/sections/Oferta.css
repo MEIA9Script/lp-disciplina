@@ -1,0 +1,266 @@
+.oferta {
+  position: relative;
+}
+
+/* Ancora antiga (#planos), invisivel e sem ocupar espaco */
+.oferta__ancora-antiga {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 1px;
+  height: 1px;
+  scroll-margin-top: 4.5rem;
+}
+
+.oferta__bloco {
+  position: relative;
+  display: grid;
+  gap: clamp(1.25rem, 0.9rem + 1.6vw, 2.25rem);
+  padding: clamp(1.35rem, 1rem + 2vw, 2.75rem);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  background:
+    radial-gradient(90% 120% at 50% 0%, rgba(139, 92, 246, 0.18), transparent 60%),
+    linear-gradient(165deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--roxo-linha);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: var(--sombra-alta), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.oferta__aura {
+  position: absolute;
+  top: -45%;
+  right: -20%;
+  width: 30rem;
+  height: 30rem;
+  max-width: 120%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.22), transparent 65%);
+  filter: blur(12px);
+  animation: respirar 9s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* --- Coluna da lista --- */
+.oferta__lista-lado {
+  position: relative;
+  z-index: 1;
+}
+
+.oferta__lista-titulo {
+  margin-bottom: var(--sp-3);
+  font-family: var(--fonte-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--verde-claro);
+}
+
+.oferta__lista {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.oferta__lista li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: var(--t-card);
+  line-height: 1.5;
+  color: var(--texto);
+}
+
+.oferta__check {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 0.15em;
+  border-radius: 50%;
+  color: #f7f3ff;
+  background: var(--roxo);
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.5);
+}
+
+/* --- Caixa de preco --- */
+.oferta__caixa {
+  position: relative;
+  z-index: 1;
+  padding: clamp(1.25rem, 1rem + 1.2vw, 1.9rem);
+  border-radius: var(--r-lg);
+  background: rgba(4, 6, 10, 0.62);
+  border: 1px solid var(--borda-forte);
+  text-align: center;
+}
+
+.oferta__preco-rotulo {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--texto-fraco);
+}
+
+.oferta__preco {
+  margin-top: 0.25rem;
+  font-family: var(--fonte-display);
+  font-size: clamp(2.85rem, 2.2rem + 3vw, 4.1rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--roxo-claro);
+  text-shadow: 0 0 44px rgba(139, 92, 246, 0.5);
+}
+
+.oferta__preco-apoio {
+  margin: 0.4rem 0 var(--sp-3);
+  font-size: 0.88rem;
+  color: var(--texto-suave);
+}
+
+.oferta__microcopy {
+  margin-top: 0.75rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--texto-fraco);
+}
+
+.oferta__formas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 1rem;
+  margin-top: var(--sp-3);
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--borda);
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+}
+
+.oferta__formas li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.oferta__formas svg {
+  color: var(--verde);
+}
+
+.oferta__comparacao {
+  margin-top: var(--sp-3);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--texto-suave);
+  text-wrap: pretty;
+}
+
+/* --- Reducao de risco --- */
+.oferta__risco {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  max-width: 46rem;
+  margin: var(--sp-3) auto 0;
+  padding: 1.1rem 1.25rem;
+  border-radius: var(--r-md);
+  background: var(--verde-fundo);
+  border: 1px solid var(--verde-linha);
+}
+
+.oferta__risco-selo {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  color: var(--verde-claro);
+  background: rgba(4, 6, 10, 0.45);
+  border: 1px solid var(--verde-linha);
+}
+
+.oferta__risco-titulo {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-family: var(--fonte-display);
+  font-size: 1.02rem;
+  color: var(--texto);
+}
+
+.oferta__risco-texto {
+  font-size: var(--t-card);
+  line-height: 1.55;
+}
+
+/* --- Alternativa de R$ 10 --- */
+.oferta__alternativa {
+  display: grid;
+  gap: var(--sp-3);
+  max-width: 46rem;
+  margin: var(--sp-3) auto 0;
+  padding: 1.15rem 1.3rem;
+  border-radius: var(--r-md);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed var(--borda-forte);
+}
+
+.oferta__alternativa-etiqueta {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--texto-fraco);
+}
+
+.oferta__alternativa-nome {
+  margin-top: 0.2rem;
+  font-family: var(--fonte-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--texto);
+}
+
+.oferta__alternativa-nome span {
+  color: var(--roxo-claro);
+}
+
+.oferta__alternativa-descricao {
+  margin-top: 0.35rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.oferta__alternativa-botao {
+  align-self: center;
+  justify-self: stretch;
+}
+
+/* --- Letra miuda --- */
+.oferta__aviso {
+  max-width: 46rem;
+  margin: var(--sp-3) auto 0;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: var(--texto-fraco);
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .oferta__bloco {
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+  }
+
+  .oferta__alternativa {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: var(--sp-4);
+  }
+
+  .oferta__alternativa-botao {
+    justify-self: end;
+  }
+}

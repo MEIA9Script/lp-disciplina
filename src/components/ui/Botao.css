@@ -19,10 +19,13 @@
     filter var(--medio) var(--ease);
 }
 
+/* Sem nowrap: os rotulos agora carregam o preco e precisam poder
+   quebrar em duas linhas na tela estreita, em vez de vazar da pilula. */
 .botao__texto {
   position: relative;
   z-index: 2;
-  white-space: nowrap;
+  line-height: 1.25;
+  text-wrap: balance;
 }
 
 .botao__seta {

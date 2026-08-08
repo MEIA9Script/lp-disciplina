@@ -1,6 +1,6 @@
 .titulo-secao {
   max-width: 44rem;
-  margin-bottom: var(--sp-5);
+  margin-bottom: clamp(1.5rem, 1.1rem + 1.6vw, 2.5rem);
 }
 
 .titulo-secao--centro {

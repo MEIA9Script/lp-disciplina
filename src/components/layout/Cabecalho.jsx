@@ -1,13 +1,13 @@
 import './Cabecalho.css'
 import { useEffect, useState } from 'react'
 import Botao from '../ui/Botao'
-import { MARCA } from '../../data/content'
+import { MARCA, PRECOS } from '../../data/content'
 
 const NAVEGACAO = [
-  { id: 'beneficios', rotulo: 'Benefícios' },
+  { id: 'o-que-e', rotulo: 'O que é' },
   { id: 'conteudo', rotulo: 'O que você recebe' },
-  { id: 'planos', rotulo: 'Preços' },
-  { id: 'como-funciona', rotulo: 'Como funciona' },
+  { id: 'oferta', rotulo: 'Preço' },
+  { id: 'garantia', rotulo: 'Garantia' },
   { id: 'faq', rotulo: 'Dúvidas' },
 ]
 
@@ -45,8 +45,8 @@ export default function Cabecalho() {
         </nav>
 
         <div className="cabecalho__acao">
-          <Botao variante="compra" destino="planos" tamanho="sm" origem="cabecalho">
-            COMEÇAR AGORA
+          <Botao variante="compra" tamanho="sm" origem="cabecalho">
+            QUERO O EBOOK · {PRECOS.completo}
           </Botao>
         </div>
       </div>

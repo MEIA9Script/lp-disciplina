@@ -37,13 +37,17 @@
   --fonte-texto: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --fonte-mono: ui-monospace, 'SFMono-Regular', Menlo, monospace;
 
-  /* Escala fluida: mobile first, cresce ate o desktop sem media query */
-  --t-eyebrow: 0.72rem;
-  --t-mini: clamp(0.8rem, 0.78rem + 0.1vw, 0.875rem);
-  --t-corpo: clamp(0.94rem, 0.9rem + 0.22vw, 1.075rem);
-  --t-lead: clamp(0.95rem, 0.88rem + 0.36vw, 1.25rem);
-  --t-h3: clamp(1.02rem, 0.96rem + 0.34vw, 1.32rem);
-  --t-h2: clamp(1.5rem, 1.15rem + 1.8vw, 3.05rem);
+  /* Escala fluida: mobile first, cresce ate o desktop sem media query.
+     Piso alto de proposito: no celular nenhum texto de leitura cai
+     abaixo de 1rem, para ninguem precisar dar zoom. */
+  --t-eyebrow: 0.74rem;
+  --t-mini: clamp(0.82rem, 0.8rem + 0.1vw, 0.875rem);
+  --t-corpo: clamp(1rem, 0.96rem + 0.2vw, 1.075rem);
+  /* Texto dentro de card: era 0.85 a 0.94rem, ilegivel no celular */
+  --t-card: clamp(0.98rem, 0.94rem + 0.18vw, 1.02rem);
+  --t-lead: clamp(1.03rem, 0.94rem + 0.4vw, 1.25rem);
+  --t-h3: clamp(1.08rem, 1rem + 0.36vw, 1.32rem);
+  --t-h2: clamp(1.6rem, 1.2rem + 1.85vw, 3.05rem);
   --t-h1: clamp(2.05rem, 1.4rem + 2.9vw, 3.55rem);
   --t-numero: clamp(1.9rem, 1.4rem + 2.2vw, 2.9rem);
 
@@ -54,7 +58,9 @@
   --sp-4: 1.75rem;
   --sp-5: 2.5rem;
   --sp-6: 3.5rem;
-  --secao-y: clamp(3rem, 2.2rem + 4vw, 7.5rem);
+  /* Menos ar entre secoes no celular: a pagina inteira encurta e a
+     oferta sobe na rolagem sem perder o respiro do desktop. */
+  --secao-y: clamp(2.25rem, 1.5rem + 3.6vw, 6rem);
   --container: 1160px;
   --container-estreito: 800px;
   --gutter: clamp(1.15rem, 0.8rem + 1.8vw, 2.5rem);

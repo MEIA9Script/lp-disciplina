@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Botao from '../ui/Botao'
 import Reveal from '../ui/Reveal'
 import TituloSecao from '../ui/TituloSecao'
-import { FAQ } from '../../data/content'
+import { FAQ, PRECOS } from '../../data/content'
 
 export default function Faq() {
   // Acordeao de abertura unica: mantem a leitura focada em uma resposta por vez.
@@ -16,8 +16,8 @@ export default function Faq() {
       <div className="container container--estreito">
         <TituloSecao
           eyebrow="Dúvidas frequentes"
-          titulo="Perguntas que costumam vir antes da compra"
-          apoio="As dúvidas que mais aparecem antes da compra, respondidas sem rodeio."
+          titulo="O que trava a compra, respondido sem rodeio"
+          apoio="Se a sua dúvida não estiver aqui, escreve para o e-mail no rodapé antes de comprar."
         />
 
         <div className="faq__lista">
@@ -56,9 +56,9 @@ export default function Faq() {
         </div>
 
         <Reveal className="faq__ajuda">
-          <p className="faq__ajuda-texto">Pronto para começar?</p>
-          <Botao variante="compra" destino="planos" origem="faq" seta>
-            QUERO COMEÇAR AGORA
+          <p className="faq__ajuda-texto">Respondeu a sua dúvida?</p>
+          <Botao variante="compra" tamanho="lg" origem="faq" bloco seta>
+            QUERO O EBOOK · {PRECOS.completo}
           </Botao>
         </Reveal>
       </div>

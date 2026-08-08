@@ -65,7 +65,7 @@
 }
 
 .passo__texto {
-  font-size: 0.94rem;
+  font-size: var(--t-card);
   line-height: 1.6;
 }
 

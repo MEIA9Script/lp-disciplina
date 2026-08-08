@@ -1,7 +1,8 @@
 import './Garantia.css'
+import Botao from '../ui/Botao'
 import Icone from '../ui/Icone'
 import Reveal from '../ui/Reveal'
-import { GARANTIA } from '../../data/content'
+import { GARANTIA, OFERTA } from '../../data/content'
 
 export default function Garantia() {
   return (
@@ -15,7 +16,7 @@ export default function Garantia() {
               <Icone nome="escudo" tamanho={26} />
             </span>
             <div>
-              <p className="garantia__eyebrow">Segurança da compra</p>
+              <p className="garantia__eyebrow">{GARANTIA.eyebrow}</p>
               <h2 className="garantia__titulo">{GARANTIA.titulo}</h2>
             </div>
           </div>
@@ -35,6 +36,13 @@ export default function Garantia() {
               </Reveal>
             ))}
           </ul>
+
+          {/* Quem chegou ate aqui ja passou pela oferta: o botao volta */}
+          <div className="garantia__acao">
+            <Botao variante="compra" origem="garantia" seta>
+              QUERO O EBOOK · {OFERTA.preco}
+            </Botao>
+          </div>
         </Reveal>
       </div>
     </section>
